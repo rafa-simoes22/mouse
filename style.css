@@ -1,0 +1,56 @@
+.conteudo{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titulo{
+    background-color: plum;
+    border-bottom: 3px solid;
+    width: auto;
+    height: 35px
+}
+#dois{
+    display: flex;
+    justify-content: flex-end;
+}
+#tres{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: -80px;
+}
+#quatro{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: -80px;
+    left: -1900px;
+}
+#sete{
+    display: flex;
+    justify-content: center;
+}
+#oito{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: -80px;
+}
+.cont{
+    position: relative;
+    left: 25%;
+}
+.tab{
+    position: relative;
+    left: 45%;
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    grid-template-rows: 20px 20px 20px;
+}
+.tabb{
+    position: relative;
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    grid-template-rows: 20px 20px 20px;
+}

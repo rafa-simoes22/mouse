@@ -12,12 +12,22 @@
     </div>
     <div>
         <p>Clique em cada um dos botões abaixo para avançar para a próxima página.</p>
-        <input type="checkbox"/>
-        <input type="checkbox"/>
-        <input type="checkbox"/>
-        <input type="checkbox"/>
-        <input type="checkbox"/>
-        <p id="um" onclick="location = '2.html'"></p>
+        <input type="checkbox" class="checkbox"/>
+        <input type="checkbox" class="checkbox"/>
+        <input type="checkbox" class="checkbox"/>
+        <input type="checkbox" class="checkbox"/>
+        <input type="checkbox" class="checkbox"/>
     </div>
 </body>
+<script>
+    var checkbox = document.getElementsByClassName("checkbox");
+
+    checkbox.addEventListener( 'change', function() {
+        if(this.checked) {
+            location = '2.html'
+        } else {
+            // Checkbox não está selecionado.
+        }
+    });
+</script>
 </html>

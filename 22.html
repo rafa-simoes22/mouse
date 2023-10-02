@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Mousercise</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Mousercise</h1>
+    </div>
+    <div>
+        <p>As caixas de mensagem são mensagens curtas que o computador coloca na tela para alertá-lo sobre informações importantes ou para fazer perguntas antes de executar uma tarefa.</p>
+        <p>Quando uma caixa de mensagem for exibida, você deve ler a mensagem ou pergunta e responder clicando em um botão apropriado na caixa de mensagem.</p>
+        <p>Clique no link abaixo para exibir uma caixa de mensagem, leia a mensagem e clique no botão apropriado na caixa.</p>
+        <a href="#" id="msg" onclick="mensagem()" >Clique em mim para exibir uma caixa de mensagem</a>
+    </div>
+</body>
+<script>
+    function mensagem() {
+        let text;
+        if (confirm("Deseja ir para a proxima página?") == true) {
+            text = "You pressed OK!";
+        } else {
+            text = "You canceled!";
+        }
+    }
+    onclick="location = '22.html'"
+</script>
+</html>

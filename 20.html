@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Mousercise</title>
+</head>
+<style>
+    .tabelaa{
+       position: relative;
+       left: 40%;
+       display: grid;
+       grid-template-columns: 120px 120px;
+       grid-template-rows:  150px 150px;
+    }
+    .bt{
+    display: grid;
+    width: 70%;
+    height: 40%;
+
+    }
+    .bd{
+    display: grid;
+    width: 20%;
+    height: 20%;
+    display: none;
+    }
+    img{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="titulo">
+        <h1>Mousercise</h1>
+    </div>
+    <div>
+        <p>Clique em cada um dos botões abaixo para avançar para a próxima página.</p>
+        <div class="tabelaa">
+            <table style="width: 80%;">
+                <tbody>
+                    <tr>
+                        <td><picture> <img id="1" class="bd"  src="2page20.png"></picture> </td>
+                        <td><picture> <img class="bt" src="page20.png" onclick="exibir1()"></picture> </td>
+                        <td><picture> <img id="2" class="bd" src="2page20.png"></picture> </td>
+                        <td><picture> <img class="bt" src="page20.png" onclick="exibir2()"></picture></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><button id="botaoContinuar" style="display: none;" onclick="location = '21.html'">Continuar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    function exibir1() {
+    document.getElementById("1").style.display = "block";
+    verificarExibicaoCompleta();
+    }
+    function exibir2() {
+    document.getElementById("2").style.display = "block";
+    verificarExibicaoCompleta();
+    }
+    function verificarExibicaoCompleta() {
+    var todasExibidas = true;
+    var imagens = document.querySelectorAll(".bd");
+    for (var i = 0; i < imagens.length; i++) {
+        if (imagens[i].style.display !== "block") {
+            todasExibidas = false;
+            break;
+        }
+    }
+
+    if (todasExibidas) {
+        document.getElementById("botaoContinuar").style.display = "block";
+    }
+    }
+</script>
+</html>

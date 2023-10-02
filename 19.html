@@ -6,28 +6,88 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Mousercise</title>
 </head>
+<style>
+    .bt{
+    display: flex;
+    width: 30%;
+    height: 30%;
+    left: 30%;
+    top: 40%;
+    }
+    .bd{
+    display: flex;
+    width: 20%;
+    height: 20%;
+    left: 30%;
+    display: none;
+    }
+    img{
+        cursor: pointer;
+    }
+</style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
     <div>
         <p>Clique em cada um dos botões abaixo para avançar para a próxima página.</p>
-        <input type="checkbox" class="checkbox"/>
-        <input type="checkbox" class="checkbox"/>
-        <input type="checkbox" class="checkbox"/>
-        <input type="checkbox" class="checkbox"/>
-        <input type="checkbox" class="checkbox"/>
+        <table style="width: 80%;">
+            <tbody>
+                <tr>
+                    <td><picture> <img class="bt" src="page20.png" onclick="exibir1()"></picture> </td>
+                    <td><picture> <img class="bt" src="page20.png" onclick="exibir2()"></picture></td>
+                    <td><picture> <img class="bt" src="page20.png" onclick="exibir3()"></picture></td>
+                    <td><picture> <img class="bt" src="page20.png" onclick="exibir4()"></picture></td>
+                    <td><picture> <img class="bt" src="page20.png" onclick="exibir5()"></picture></td>
+                </tr>
+                <tr>
+                    <td><picture> <img id="1" class="bd"  src="2page20.png"></picture> </td>
+                    <td><picture> <img id="2" class="bd" src="2page20.png"></picture> </td>
+                    <td><picture> <img id="3" class="bd" src="2page20.png"></picture> </td>
+                    <td><picture> <img id="4" class="bd" src="2page20.png"></picture> </td>
+                    <td><picture> <img id="5" class="bd" src="2page20.png "></picture> </td>
+                </tr>
+                <tr>
+                    <td colspan="5"><button id="botaoContinuar" style="display: none;" onclick="location = '20.html'">Continuar</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 <script>
-    var checkbox = document.getElementsByClassName("checkbox");
-
-    checkbox.addEventListener( 'change', function() {
-        if(this.checked) {
-            location = '2.html'
-        } else {
-            // Checkbox não está selecionado.
+    function exibir1() {
+    document.getElementById("1").style.display = "block";
+    verificarExibicaoCompleta();
+    }
+    function exibir2() {
+    document.getElementById("2").style.display = "block";
+    verificarExibicaoCompleta();
+    }
+    function exibir3() {
+    document.getElementById("3").style.display = "block";
+    verificarExibicaoCompleta();
+    }
+    function exibir4() {
+    document.getElementById("4").style.display = "block";
+    verificarExibicaoCompleta();
+    }
+    function exibir5() {
+    document.getElementById("5").style.display = "block";
+    verificarExibicaoCompleta();
+    }
+    function verificarExibicaoCompleta() {
+    var todasExibidas = true;
+    var imagens = document.querySelectorAll(".bd");
+    for (var i = 0; i < imagens.length; i++) {
+        if (imagens[i].style.display !== "block") {
+            todasExibidas = false;
+            break;
         }
-    });
+    }
+
+    if (todasExibidas) {
+        document.getElementById("botaoContinuar").style.display = "block";
+    }
+    }
 </script>
 </html>

@@ -4,10 +4,6 @@
     width: auto;
     height: 35px
 }
-.clicar{
-    background-color: aqua;
-    cursor: pointer;
-}
 button{
     cursor: pointer;
 }

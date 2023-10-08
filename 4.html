@@ -7,23 +7,28 @@
     <title>Mousercise</title>
 </head>
 <style>
-    #quatro{
-        display: flex;
-        justify-content: flex-end;
+    #texto{
+        background-color: beige;
         position: relative;
-        right: 95%;
+        right: -82%;
+        bottom: -22px;
+    }
+    #quatro{
+        cursor: pointer;
+        font-size: 80px;
+        background-color: aquamarine;
+        position: relative;
+        bottom: -110px;
     }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
-    <div >
-        <p style="display: flex;
-        justify-content: flex-end;"
-        >Agora, clique no número 4 à esquerda.</p>
-        <div class="clicar">
-            <p id="quatro" onclick="location = '5.html'" style="font-size: 80px;">4</p>
+    <div>
+        <span id="texto">Agora, clique no número 4 à esquerda.</span>
+        <div>
+            <span id="quatro" onclick="location = '5.html'">4</span>
         </div>
     </div>
 </body>

@@ -7,13 +7,19 @@
     <title>Mousercise</title>
 </head>
 <style>
-    #tres{
-        display: flex;
-        justify-content: flex-end;
+    #texto{
+        background-color: beige;
+        position: relative;
+        right: -87%;
+        bottom: -20px;
     }
-    .clicar{
-    position: relative;
-    bottom: -80px;
+    #tres{
+        font-size: 80px;
+        cursor: pointer;
+        background-color: antiquewhite;
+        position: relative;
+        bottom: -230px;
+        right: -97%;
     }
 </style>
 <body>
@@ -21,12 +27,9 @@
         <h1>Mousercise</h1>
     </div>
     <div>
-        <p style="
-        display: flex;
-        justify-content: flex-end;"
-        >Clique no número 3 abaixo.</p>
-        <div class="clicar">
-            <p id="tres" onclick="location = '4.html'" style="font-size: 80px;">3</p>
+        <span id="texto">Clique no número 3 abaixo.</span>
+        <div>
+            <span id="tres" onclick="location = '4.html'">3</span>
         </div>
     </div>
 </body>

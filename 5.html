@@ -10,10 +10,12 @@
     #texto{
         position: relative;
         bottom: -210px;
+        background-color: antiquewhite;
     }
-    .clicar{
-        position: relative;
-        bottom: 68px;
+    #cinco{
+        cursor: pointer;
+        font-size: 40px;
+        background-color: aliceblue;
     }
 </style>
 <body>
@@ -21,9 +23,9 @@
         <h1>Mousercise</h1>
     </div>
     <div>
-        <p id="texto">Clique no número 5 acima.(os números são um pouco menores agora)</p>
-        <div class="clicar">
-            <p id="cinco" onclick="location = '6.html'" style="font-size: 40px;">5</p>
+        <span id="texto">Clique no número 5 acima.(os números são um pouco menores agora)</span>
+        <div>
+            <span id="cinco" onclick="location = '6.html'">5</span>
         </div>
     </div>
 </body>

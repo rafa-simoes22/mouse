@@ -11,6 +11,9 @@
         width: 200px;
         height: auto;
     }
+    #dog{
+        cursor: pointer;
+    }
     #texto{
         display: flex;
         flex-direction: column;
@@ -33,9 +36,7 @@
         <p >Uma das imagens abaixo é clicável. Encontre-o e clique nele para avançar para a próxima tela.</p>
         <div class="imagem">
             <img src="./imagens/borboleta.jfif" />
-            <div class="clicar">
-                <img src="./imagens/dog.jfif" onclick="location = '18.html'"/>
-            </div>
+            <img id="dog" src="./imagens/dog.jfif" onclick="location = '18.html'"/>
             <img src="./imagens/brasil.jfif"/>
         </div>
     </div>

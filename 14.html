@@ -7,17 +7,23 @@
     <title>Mousercise</title>
 </head>
 <style>
-    
+    #texto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #botão{
+        position: relative;
+        left: 20%;
+    }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
-    <div style="position: relative;
-    left: 30%;">
+    <div id="texto">
         <p>Muitas vezes você terá que clicar em botões, que podem aparecer em diversos estilos. Clique no botão abaixo para continuar.</p>
-        <div class="clicar" style="position: relative;
-        left: 20%;">
+        <div>
             <button id="botão" onclick="location = '15.html'">Clique em mim!</button>
         </div>
     </div>

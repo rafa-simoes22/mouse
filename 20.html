@@ -7,27 +7,18 @@
     <title>Mousercise</title>
 </head>
 <style>
-    .tabelaaa{
-    position: relative;
-    left: 40%;
-    display: grid;
-    grid-template-columns: 120px 120px;
-    grid-template-rows:  150px 150px;
-    }
     .bt{
-    display: grid;
-    width: 70%;
-    height: 40%;
-
+    width: 90px;
     }
     .bd{
-    display: grid;
-    width: 20%;
-    height: 20%;
+    width: 90px;
     display: none;
     }
     img{
         cursor: pointer;
+    }
+    table{
+        width: 800px;
     }
 </style>
 <body>
@@ -36,21 +27,19 @@
     </div>
     <div>
         <p>Clique em cada um dos botões abaixo para avançar para a próxima página.</p>
-        <div class="tabelaaa">
-            <table style="width: 80%;">
-                <tbody>
-                    <tr>
-                        <td><picture> <img id="1" class="bd"  src="./imagens/2page20.png"></picture> </td>
-                        <td><picture> <img class="bt" src="./imagens/page20.png" onclick="exibir1()"></picture> </td>
-                        <td><picture> <img id="2" class="bd" src="./imagens/2page20.png"></picture> </td>
-                        <td><picture> <img class="bt" src="./imagens/page20.png" onclick="exibir2()"></picture></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5"><button id="botaoContinuar" style="display: none;" onclick="location = '21.html'">Continuar</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td><picture> <img id="1" class="bd"  src="./imagens/2page20.png"></picture> </td>
+                    <td><picture> <img class="bt" src="./imagens/page20.png" onclick="exibir1()"></picture> </td>
+                    <td><picture> <img id="2" class="bd" src="./imagens/2page20.png"></picture> </td>
+                    <td><picture> <img class="bt" src="./imagens/page20.png" onclick="exibir2()"></picture></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><button id="botaoContinuar" style="display: none;" onclick="location = '21.html'">Continuar</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 <script>

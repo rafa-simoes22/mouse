@@ -7,20 +7,35 @@
     <title>Mousercise</title>
 </head>
 <style>
-    
+    img{
+        width: 200px;
+        height: auto;
+    }
+    #texto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagem{
+        display: flex;
+        align-items: center;
+        gap: 5%;
+        height: auto;
+        width: 700px;
+    }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
-    <div>
-        <p id="pimg">As imagens também podem ser clicáveis. Imagens clicáveis geralmente fazem com que o cursor do mouse mude para o formato de “mão” quando o cursor se move sobre a imagem.</p>
-        <p id="pimg">Uma das imagens abaixo é clicável. Encontre-o e clique nele para avançar para a próxima tela.</p>
+    <div id="texto">
+        <p>As imagens também podem ser clicáveis. Imagens clicáveis geralmente fazem com que o cursor do mouse mude para o formato de “mão” quando o cursor se move sobre a imagem.</p>
+        <p >Uma das imagens abaixo é clicável. Encontre-o e clique nele para avançar para a próxima tela.</p>
         <div class="imagem">
+            <img src="./imagens/borboleta.jfif" />
             <div class="clicar">
                 <img src="./imagens/dog.jfif" onclick="location = '18.html'"/>
             </div>
-            <img src="./imagens/borboleta.jfif" />
             <img src="./imagens/brasil.jfif"/>
         </div>
     </div>

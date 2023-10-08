@@ -1,108 +1,14 @@
-.conteudo{
-    width: 600px;
-    position: relative;
-    left: 30%;  
-}
 .titulo{
     background-color: plum;
     border-bottom: 3px solid;
     width: auto;
     height: 35px
 }
-
-
-
-
-#dois{
-    display: flex;
-    justify-content: flex-end;
-}
-#tres{
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    bottom: -80px;
-}
-#quatro{
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    bottom: -80px;
-    left: -1800px;
-}
-#sete{
-    display: flex;
-    justify-content: center;
-}
-#oito{
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    bottom: -80px;
-}
-.cont{
-    position: relative;
-    left: 25%;
-}
-.tab9{
-    position: relative;
-    left: 45%;
-    display: grid;
-    grid-template-columns: 20px 20px 20px;
-    grid-template-rows: 20px 20px 20px;
-    font-size: 25px;
-}
-.tab10{
-    position: relative;
-    display: grid;
-    grid-template-columns: 18px 20px 18px;
-    grid-template-rows: 18px 18px 18px;
-    font-size: 20px;
-}
-.tab11{
-    position: relative;
-    left: 45%;
-    display: grid;
-    grid-template-columns: 12px 13px 12px;
-    grid-template-rows: 12px 12px 12px;
-    font-size: 15px;
-}
-.tab12{
-    position: relative;
-    left: 45%;
-    display: grid;
-    grid-template-columns: 25px 25px 25px;
-    grid-template-rows: 20px 20px 20px;
-    font-size: 20px;
-}
-.tab13{
-    position: relative;
-    left: 45%;
-    display: grid;
-    grid-template-columns: 20px 22px 20px;
-    grid-template-rows: 20px 20px 20px;
-    font-size: 20px;
-}
 .clicar{
+    background-color: aqua;
     cursor: pointer;
 }
 #botão{
     cursor: pointer;
 }
-img{
-    width: 200px;
-    height: auto;
-}
-#pimg{
-    position: relative;
-    left: 20%;
-}
-.imagem{
-    display: flex;
-    gap: 5%;
-    height: auto;
-    width: 790px;
-    padding-left: 3%;
-    position: relative;
-    left: 25%;
-}
+

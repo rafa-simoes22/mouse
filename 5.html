@@ -7,18 +7,21 @@
     <title>Mousercise</title>
 </head>
 <style>
-    
+    #texto{
+        position: relative;
+        bottom: -210px;
+    }
+    .clicar{
+        position: relative;
+        bottom: 68px;
+    }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
-    <div >
-        <p style="display: flex;
-        justify-content: flex-end;
-        position: relative;
-        bottom: -180px;
-        left: -1455px;">Clique no número 5 acima.(os números são um pouco menores agora)</p>
+    <div>
+        <p id="texto">Clique no número 5 acima.(os números são um pouco menores agora)</p>
         <div class="clicar">
             <p id="cinco" onclick="location = '6.html'" style="font-size: 40px;">5</p>
         </div>

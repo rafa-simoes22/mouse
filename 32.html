@@ -1,1 +1,46 @@
-<!--onclick="location = '33.html'" -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Mousercise</title>
+</head>
+<style>
+    .cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #botao{
+        display: none;
+    }
+
+</style>
+<body>
+    <div class="titulo">
+        <h1>Mousercise</h1>
+    </div>
+    <div class="cont">
+        <p>A pequena caixa branca abaixo é uma caixa de lista suspensa. Clique na seta triangular preta à direita para abrir a lista de opções e, a seguir, clique na opção desejada.</p>
+        <p>Selecione o dia de hoje (" Segunda-feira") na caixa de listagem suspensa e clique no botão 'Continuar'.</p>
+    </div>
+    <select name="listaa" id="lista" onclick="botao()">
+        <option value="Domingo">Domingo</option>
+        <option value="Segunda">Segunda</option>
+        <option value="Terça">Terça</option>
+        <option value="Quarta">Quarta</option>
+        <option value="Quinta">Quinta</option>
+        <option value="Sexta">Sexta</option>
+        <option value="Sabado">Sabado</option>
+        <option value="Domingo">Domingo</option>
+    </select>
+    <button id="botao" onclick="location = '33.html'">Continuar</button>
+</body>
+<script>
+    function botao(){
+        if (document.getElementById("lista").value == "Quarta")
+            document.getElementById("botao").style.display = "block"; 
+    }
+</script>
+</html>

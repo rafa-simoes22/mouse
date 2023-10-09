@@ -10,9 +10,9 @@
     .checbox{
         width: 100px;
         height: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start ;
+    }
+    #botao{
+        display: none;
     }
 </style>
 <body>
@@ -22,21 +22,107 @@
     <div>
         <p>As caixas de seleção permitem selecionar uma ou mais opções de um grupo de opções. Clique dentro de cada uma das caixas de seleção brancas abaixo para continuar.</p>
     </div>
-    <!--onclick="location = '29.html'" -->
     <div class="checbox">
-        <input type="checkbox" id="1"/>
-        <input type="checkbox" id="2"/>
-        <input type="checkbox" id="3"/>
-        <input type="checkbox" id="4"/>
-        <input type="checkbox" id="5"/>
-        <input type="checkbox" id="6"/>
-        <input type="checkbox" id="7"/>
-        <input type="checkbox" id="8"/>
-        <input type="checkbox" id="9"/>
-        <input type="checkbox" id="10"/>
+        <input type="checkbox" id="1" onclick="um()"/>
+        <label for="1">Um</label>
+        <br>
+        <br>
+        <input type="checkbox" id="2" onclick="dois()"/>
+        <label for="2">Dois</label>
+        <br>
+        <br>
+        <input type="checkbox" id="3" onclick="tres()"/>
+        <label for="3">Tres</label>
+        <br>
+        <br>
+        <input type="checkbox" id="4" onclick="quatro()"/>
+        <label for="4">Quatro</label>
+        <br>
+        <br>
+        <input type="checkbox" id="5" onclick="cinco()"/>
+        <label for="5">Cinco</label>
+        <br>
+        <br>
+        <input type="checkbox" id="6" onclick="seis()"/>
+        <label for="6">Seis</label>
+        <br>
+        <br>
+        <input type="checkbox" id="7" onclick="sete()"/>
+        <label for="7">Sete</label>
+        <br>
+        <br>
+        <input type="checkbox" id="8" onclick="oito()"/>
+        <label for="8">Oito</label>
+        <br>
+        <br>
+        <input type="checkbox" id="9" onclick="nove()"/>
+        <label for="9">Nove</label>
+        <br>
+        <br>
+        <input type="checkbox" id="10" onclick="dez()"/>
+        <label for="10">Dez</label>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="botao" onclick="location = '29.html'">Continuar</button>
 </body>
 <script>
+    var check = 0
+    var tcheck = 10
 
+    function vcheck(){
+        if(check===tcheck) {
+            document.getElementById("botao").style.display = "block"; 
+        }
+    }
+    
+    function um(){
+        check ++;
+        vcheck();
+    }
+    function dois(){
+        check ++;
+        vcheck();
+    }
+    function tres(){
+        check ++;
+        vcheck();
+    }
+    function quatro(){
+        check ++;
+        vcheck();
+    }
+    function cinco(){
+        check ++;
+        vcheck();
+    }
+    function seis(){
+        check ++;
+        vcheck();
+    }
+    function sete(){
+        check ++;
+        vcheck();
+    }
+    function oito(){
+        check ++;
+        vcheck();
+    }
+    function nove(){
+        check ++;
+        vcheck();
+    }
+    function dez(){
+        check ++;
+        vcheck();
+    }
 </script>
 </html>

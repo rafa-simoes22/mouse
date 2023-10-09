@@ -7,12 +7,15 @@
     <title>Mousercise</title>
 </head>
 <style>
-    .botoes{
+    .radio{
         width: 100px;
         height: 200px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start ;
+        align-items: flex-start;
+    }
+    #botao{
+        display: none;
     }
 </style>
 <body>
@@ -22,22 +25,69 @@
     <div>
         <p>Os botões de opção permitem escolher apenas uma opção de um grupo de opções. Clique em cada um dos botões de opção abaixo para continuar. (Observe que apenas um será selecionado por vez.)</p>
     </div>
-<!--onclick="location = '31.html'" -->
-    <div class="botoes">
-        <p>Escolha</p>
-        <input type="radio" id="1"/>
-        <input type="radio" id="2"/>
-        <input type="radio" id="3"/>
-        <input type="radio" id="4"/>
-        <input type="radio" id="5"/>
-        <input type="radio" id="6"/>
-        <input type="radio" id="7"/>
-        <input type="radio" id="8"/>
-        <input type="radio" id="9"/>
-        <input type="radio" id="10"/>
+    <div class="radio">
+        <input type="radio" name="option" onclick="um()"/>
+        <input type="radio" name="option" onclick="dois()"/>
+        <input type="radio" name="option" onclick="tres()"/>
+        <input type="radio" name="option" onclick="quatro()"/>
+        <input type="radio" name="option" onclick="cinco()"/>
+        <input type="radio" name="option" onclick="seis()"/>
+        <input type="radio" name="option" onclick="sete()"/>
+        <input type="radio" name="option" onclick="oito()"/>
+        <input type="radio" name="option" onclick="nove()"/>
+        <input type="radio" name="option" onclick="dez()"/>
     </div>
+    <button id="botao" onclick="location = '31.html'">Continuar</button>
 </body>
 <script>
+    var check = 0
+    var tcheck = 10
 
+    function vcheck(){
+        if(check===tcheck) {
+            document.getElementById("botao").style.display = "block"; 
+        }
+    }
+    
+    function um(){
+        check ++;
+        vcheck();
+    }
+    function dois(){
+        check ++;
+        vcheck();
+    }
+    function tres(){
+        check ++;
+        vcheck();
+    }
+    function quatro(){
+        check ++;
+        vcheck();
+    }
+    function cinco(){
+        check ++;
+        vcheck();
+    }
+    function seis(){
+        check ++;
+        vcheck();
+    }
+    function sete(){
+        check ++;
+        vcheck();
+    }
+    function oito(){
+        check ++;
+        vcheck();
+    }
+    function nove(){
+        check ++;
+        vcheck();
+    }
+    function dez(){
+        check ++;
+        vcheck();
+    }
 </script>
 </html>

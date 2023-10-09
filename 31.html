@@ -1,1 +1,93 @@
-<!--onclick="location = '32.html'" -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Mousercise</title>
+</head>
+<style>
+    .radio{
+        width: 100px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #botao{
+        display: none;
+    }
+</style>
+<body>
+    <div class="titulo">
+        <h1>Mousercise</h1>
+    </div>
+    <div>
+        <p>Escolha um alimento nos botões de opção abaixo e clique no botão ‘Continuar’.</p>
+    </div>
+    <div class="radio">
+        <input type="radio" name="option" onclick="um()"/>
+        <input type="radio" name="option" onclick="dois()"/>
+        <input type="radio" name="option" onclick="tres()"/>
+        <input type="radio" name="option" onclick="quatro()"/>
+        <input type="radio" name="option" onclick="cinco()"/>
+        <input type="radio" name="option" onclick="seis()"/>
+        <input type="radio" name="option" onclick="sete()"/>
+        <input type="radio" name="option" onclick="oito()"/>
+        <input type="radio" name="option" onclick="nove()"/>
+        <input type="radio" name="option" onclick="dez()"/>
+    </div>
+    <button id="botao" onclick="location = '32.html'">Continuar</button>
+</body>
+<script>
+    var check = 0
+    var tcheck = 1
+
+    function vcheck(){
+        if(check===tcheck) {
+            document.getElementById("botao").style.display = "block"; 
+        }
+    }
+    
+    function um(){
+        check ++;
+        vcheck();
+    }
+    function dois(){
+        check ++;
+        vcheck();
+    }
+    function tres(){
+        check ++;
+        vcheck();
+    }
+    function quatro(){
+        check ++;
+        vcheck();
+    }
+    function cinco(){
+        check ++;
+        vcheck();
+    }
+    function seis(){
+        check ++;
+        vcheck();
+    }
+    function sete(){
+        check ++;
+        vcheck();
+    }
+    function oito(){
+        check ++;
+        vcheck();
+    }
+    function nove(){
+        check ++;
+        vcheck();
+    }
+    function dez(){
+        check ++;
+        vcheck();
+    }
+</script>
+</html>

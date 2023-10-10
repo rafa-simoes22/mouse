@@ -1,1 +1,43 @@
-<button onclick="location = '36.html'">continuar</button>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Mousercise</title>
+</head>
+<style>
+    #botao{
+        display: none;
+    }
+</style>
+<body>
+    <div class="titulo">
+        <h1>Mousercise</h1>
+    </div>
+    <div>
+        <p></p>
+        <p></p>
+    </div>
+    <select name="listaa" id="lista" size="4" onclick="botao()">
+        <option value="Um">Um</option>
+        <option value="Dois">Dois</option>
+        <option value="Tres">Tres</option>
+        <option value="Quatro">Quatro</option>
+        <option value="Cinco">Cinco</option>
+        <option value="Seis">Seis</option>
+        <option value="Sete">Sete</option>
+        <option value="Oito">Oito</option>
+        <option value="Nove">Nove</option>
+        <option value="Dez">Dez</option>
+    </select>
+    <button id="botao" onclick="location = '36.html'">Continuar</button>
+</body>
+<script>
+    function botao(){
+        if (document.getElementById("lista").value == "Seis")
+            document.getElementById("botao").style.display = "block";
+        else document.getElementById("botao").style.display = "none";
+    }
+</script>
+</html>

@@ -23,7 +23,7 @@
     </div>
     <div class="cont">
         <p>A pequena caixa branca abaixo é uma caixa de lista suspensa. Clique na seta triangular preta à direita para abrir a lista de opções e, a seguir, clique na opção desejada.</p>
-        <p>Selecione o dia de hoje (" Segunda-feira") na caixa de listagem suspensa e clique no botão 'Continuar'.</p>
+        <p>Selecione o dia de hoje (" Segunda ") na caixa de listagem suspensa e clique no botão 'Continuar'.</p>
     </div>
     <select name="listaa" id="lista" onclick="botao()">
         <option value="Domingo">Domingo</option>
@@ -39,8 +39,9 @@
 </body>
 <script>
     function botao(){
-        if (document.getElementById("lista").value == "Quarta")
-            document.getElementById("botao").style.display = "block"; 
+        if (document.getElementById("lista").value == "Segunda")
+            document.getElementById("botao").style.display = "block";
+        else document.getElementById("botao").style.display = "none"; 
     }
 </script>
 </html>

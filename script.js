@@ -1,5 +1,5 @@
 function prox(){
-    var botao = document.getElementById("botaoo");
+    var botao = document.getElementById("botao");
     botao.addEventListener("click", location = '37.html');
 }
 

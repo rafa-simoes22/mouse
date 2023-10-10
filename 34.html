@@ -7,17 +7,29 @@
     <title>Mousercise</title>
 </head>
 <style>
+    .cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     #botao{
         display: none;
+        position: relative;
+        left: 900px;
+        top: 10px;
+    }
+    #lista{
+        position: relative;
+        left: 900px;
     }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
-    <div>
-        <p></p>
-        <p></p>
+    <div class="cont">
+        <p>A caixa branca abaixo é uma caixa de lista de rolagem. Use a barra de rolagem no lado direito da caixa de listagem para percorrer todas as opções disponíveis.</p>
+        <p>Clique em uma opção para selecioná-la.Selecione o mês atual (" Outubro") e clique no botão 'Continuar'.</p>
     </div>
     <select name="listaa" id="lista" size="4" onclick="botao()">
         <option value="Janeiro">Janeiro</option>

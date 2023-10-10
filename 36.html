@@ -8,25 +8,33 @@
     <title>Mousercise</title>
 </head>
 <style>
-    
+    strong{
+        color: red;
+    }
+    button{
+        position: relative;
+        top: 20px;
+    }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
     <div>
-        <p></p>
+        <p>As finas caixas brancas abaixo são caixas de texto. Clique na primeira caixa com o mouse e digite seu primeiro nome. Em seguida, clique dentro da segunda caixa e digite seu sobrenome. Quando terminar, clique no botão 'Enviar'.</p>
     </div>
     <div>
         <form>
-            <label for="nome">Primeiro Nome</label>
+            <label for="nome"><strong>Primeiro Nome:</strong></label>
             <input type="text"  id="nome">
             <br>
-            <label for="sobrenome">Segundo Nome</label>
+            <label for="sobrenome"><strong>Segundo Nome:</strong></label>
             <input type="text" id="sobrenome">
-            <button id="botaoo" onclick="mensagem()">Enviar</button>
         </form>
+        <button id="botao" ondblclick="prox()" onclick="mensagem()">Enviar</button>
     </div>
+    <br>
+    <p id="resposta"></p>
 </body>
 </html>
 

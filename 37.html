@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
     <title>Mousercise</title>
 </head>
 <style>
@@ -13,76 +12,123 @@
         flex-direction: column;
         align-items: center;
     }
+    .container { 
+        display: flex; 
+        justify-content: space-between; 
+    } 
+    .respostas, 
+    .perguntas { 
+        width: 45%; 
+    } 
+    .respostas h3, 
+    .perguntas h4 { 
+        text-align: center; 
+    } 
+    .respostas p, 
+    .perguntas p {
+        margin: 0; 
+    } 
+    .bd{ 
+        display: none; 
+        width: 30px; 
+        height: 30px; 
+    } 
+    #botao{ 
+        /**display: none;**/
+        position: relative; 
+        right: 1380%;  
+        top: 70%; 
+    }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
     <div>
-        <h1 id="resposta">x</h1>
+        <!--<h1 id="resposta">x</h1>-->
         <div id="texto">
             <p>Pratique suas habilidades de copiar e colar <strong>copiando</strong> as respostas na coluna da esquerda e <strong>colando-as</strong> ao lado das perguntas corretas à direita.</p>
             <p>Para <strong>copiar</strong> o texto, destaque-o com o mouse, mantenha pressionada a tecla <strong>Ctrl</strong> do teclado e toque rapidamente na tecla <strong>C</strong>. Para <strong>colar</strong> , clique dentro da caixa de texto onde deseja colar a resposta, mantenha pressionada a tecla <strong>Ctrl</strong> e toque rapidamente na tecla <strong>V</strong>.</p>
             <p>Você deve responder todas as perguntas corretamente antes de continuar.</p>
         </div>
-        <hr>
-        <div class="conteudo">
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Respostas</th>
-                        <th>Perguntas</th>
-                    </tr>
-                    <tr>
-                        <td>R</td>
-                        <td>P</td>
-                        <td>
-                            <form>
-                                <input type="text" size="10">
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>R</td>
-                        <td>P</td>
-                        <td>
-                            <form>
-                                <input type="text"size="10">
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>R</td>
-                        <td>P</td>
-                        <td>
-                            <form>
-                                <input type="text"size="10">
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>R</td>
-                        <td>P</td>
-                        <td>
-                            <form>
-                                <input type="text"size="10">
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>R</td>
-                        <td>P</td>
-                        <td>
-                            <form>
-                                <input type="text"size="10">
-                            </form>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <button onclick="location = '38.html'">Continuar</button>
-        </div>
-    </div>
-</body>
+        <br> 
+        <hr> 
+        <div class="container"> 
+            <div class="respostas"> 
+                <h3>Respostas:</h3> 
+                <p>A. Briófitas</p> 
+                <hr> 
+                <p>B. Pteridófitas</p> 
+                <hr> 
+                <p>C. Angiospermas</p> 
+                <hr> 
+                <p>D. Gimnospermas</p> 
+            </div> 
+            <div class="perguntas"> 
+                <h4>Questões:</h4> 
+                <p>Qual é o grupo de plantas que geralmente é encontrado em ambientes úmidos, não possui vasos condutores de seiva e não produz flores nem sementes?</p> 
+                <p> <input type="text" id="1resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '1resposta')"></p> 
+                <picture> <img id="1img" class="bd" src="/imagens/2page20.png"></picture> 
+                <p id="1mensagem" style="color: red;"></p> 
+                <hr> 
+                <p>Que grupo de plantas possui vasos condutores de seiva, mas ainda se reproduz por meio de esporos em vez de sementes?</p> 
+                <p> <input type="text" id="2resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '2resposta')"></p> 
+                <picture> <img id="2img" class="bd" src="/imagens/2page20.png"></picture> 
+                <p id="2mensagem" style="color: red;"></p> 
+                <hr> 
+                <p>Quais plantas têm sementes nuas, sem a proteção de frutos, e frequentemente possuem folhas em forma de agulha?</p> 
+                <p> <input type="text" id="3resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '3resposta')"></p> 
+                <picture> <img id="3img" class="bd" src="/imagens/2page20.png"></picture> 
+                <p id="3mensagem" style="color: red;"></p> 
+                <hr> 
+                <p> Que tipo de plantas produz flores e sementes encapsuladas em frutos?</p> 
+                <p> <input type="text" id="4resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '4resposta')"></p> 
+                <picture> <img id="4img" class="bd" src="/imagens/2page20.png"></picture> 
+                <p id="4mensagem" style="color: red;"></p> 
+            </div>  
+            <div> 
+                <button id="botao" onclick="checkAllAnswers(), location = '38.html'">Continuar</button> 
+            </div> 
+    <script> 
+    let correctAnswers = { 
+        1: "Briófitas", 
+        2: "Pteridófitas", 
+        3: "Gimnospermas", 
+        4: "Angiospermas" 
+    }; 
+    function checkAnswer(questionNumber) { 
+        const inputElement = document.getElementById(questionNumber + "resposta"); 
+        const imageElement = document.getElementById(questionNumber + "img"); 
+        const messageElement = document.getElementById(questionNumber + "mensagem"); 
+        if (inputElement.value.trim().toLowerCase() === correctAnswers[questionNumber].toLowerCase()) {
+            imageElement.style.display = "block"; 
+            messageElement.textContent = ""; } 
+        else { 
+            imageElement.style.display = "none"; 
+            messageElement.textContent = "Resposta errada! Tente novamente!"; } 
+    } 
+    function checkAllAnswers() { 
+        let allAnswersCorrect = true; 
+        for (let i = 1; i <= 4; i++) { 
+            const imageElement = document.getElementById(i + "img"); 
+            if (imageElement.style.display !== "block") { 
+                allAnswersCorrect = false; 
+                break; 
+            } 
+        }
+        if (allAnswersCorrect) { 
+            document.getElementById("botao").style.display = "block"; 
+        } 
+        else {  
+            document.getElementById("botao").style.display = "none"; 
+        }
+    } 
+    function handlePaste(event, inputId) { 
+        event.preventDefault(); 
+        const clipboardData = event.clipboardData || window.clipboardData; 
+        const pastedData = clipboardData.getData("text/plain"); 
+        document.getElementById(inputId).value = pastedData; 
+        checkAnswer(inputId.charAt(0)); // Check the answer after pasting checkAllAnswers(); // Check if all answers are correct 
+    } 
+    </script>
 </html>

@@ -8,14 +8,29 @@
 </head>
 <style>
     .conteudo{
-    width: 600px;
+    width: 900px;
     position: relative;
-    left: 30%;
+    left: 20%;
     }
     #botao{
+        cursor: pointer;
         position: relative;
-        left: 40%;
+        left: 50%;
+        bottom: 150px;
+        width: 100px;
+        /**z-index: 2;**/
     }
+    #star{
+        position: relative;
+        top: 30%;
+    }
+    /**#mario{
+        width: 900px;
+        height: 400px;
+        position: relative;
+        left: 12%;
+        z-index: 1;
+    }**/
 </style>
 <body>
     <div class="titulo">
@@ -23,8 +38,12 @@
     </div>
     <div class="conteudo">
         <h1>Bem-vindo ao Mousercise!</h1>
-        <p>Este exercício irá ajudá-lo a praticar suas habilidades com o mouse do computador e ensiná-lo a usar os controles básicos da interface do usuário. Clique em um dos botões abaixo para começar.</p>
-        <button id="botao" onclick="location = '1.html'">Iniciar</button>
+        <p>Este exercício irá ajudá-lo a praticar suas habilidades com o mouse do computador e ensiná-lo a usar os controles básicos da interface do usuário. Entre nessa aventura para descobrir como foi a era dos jogos de consoles de 8, 16 e 32 bits.</p>
+    </div>
+    <div id="imagens">
+        <img id="botao" src="/imagens/start.png" alt="start" onclick="location = '1.html'" draggable="false">
+        <!--<img id="mario" src="./imagens/tela-inicial-mario.gif" alt="mario" draggable="false">-->
+        <img id="star" src="./imagens/star.gif" alt="estrela" draggable="false">
     </div>
 </body>
 </html>

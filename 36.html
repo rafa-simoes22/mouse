@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
     <title>Mousercise</title>
 </head>
 <style>
@@ -26,13 +25,27 @@
     <div>
         <form>
             <label for="nome"><strong>Primeiro Nome:</strong></label>
-            <input type="text"  id="nome">
+            <input type="text" id="nome">
             <br>
             <label for="sobrenome"><strong>Segundo Nome:</strong></label>
             <input type="text" id="sobrenome">
         </form>
-        <button id="botao" onclick="prox(), mensagem()">Enviar</button>
+        <button id="botao" onclick="proximoPagina()">Enviar</button>
     </div>
 </body>
+<script>
+    function proximoPagina() {
+        var nome = document.getElementById("nome").value;
+        var sobrenome = document.getElementById("sobrenome").value;
+
+        if (nome !== "" && sobrenome !== "") {
+            localStorage.setItem("nome", nome);
+            localStorage.setItem("sobrenome", sobrenome);
+            location.href = "37.html";
+        } else {
+            alert("Preencha o nome e sobrenome antes de prosseguir.");
+        }
+    }
+</script>
 </html>
 

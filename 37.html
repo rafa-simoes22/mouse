@@ -12,32 +12,38 @@
         flex-direction: column;
         align-items: center;
     }
-    .container { 
-        display: flex; 
-        justify-content: space-between; 
-    } 
-    .respostas, 
-    .perguntas { 
-        width: 45%; 
-    } 
-    .respostas h3, 
-    .perguntas h4 { 
-        text-align: center; 
-    } 
-    .respostas p, 
-    .perguntas p {
-        margin: 0; 
-    } 
-    .bd{ 
-        display: none; 
-        width: 30px; 
-        height: 30px; 
-    } 
-    #botao{ 
-        /**display: none;**/
-        position: relative; 
-        right: 1380%;  
-        top: 70%; 
+    #resposta{
+        font-size: 30px;
+    }
+    #botao {
+        display: none;
+        position: relative;
+        bottom: 40px;
+        left: 20%;
+    }
+    .table {
+        width: 90%;
+        border-collapse: collapse;
+        position: relative;
+        left: 5%;
+        }
+    .table th, .table td {
+        border: 1px solid #000;
+        padding: 5px;
+    }
+    .table th {
+        text-align: center;
+    }
+    .respostas, .perguntas {
+        width: 50%;
+    }
+    .respostas h3, .perguntas h4 {
+        text-align: center;
+    }
+    .bd {
+        display: none;
+        width: 30px;
+        height: 30px;
     }
 </style>
 <body>
@@ -45,90 +51,116 @@
         <h1>Mousercise</h1>
     </div>
     <div>
-        <!--<h1 id="resposta">x</h1>-->
+        <span id="resposta"></span>
         <div id="texto">
             <p>Pratique suas habilidades de copiar e colar <strong>copiando</strong> as respostas na coluna da esquerda e <strong>colando-as</strong> ao lado das perguntas corretas à direita.</p>
             <p>Para <strong>copiar</strong> o texto, destaque-o com o mouse, mantenha pressionada a tecla <strong>Ctrl</strong> do teclado e toque rapidamente na tecla <strong>C</strong>. Para <strong>colar</strong> , clique dentro da caixa de texto onde deseja colar a resposta, mantenha pressionada a tecla <strong>Ctrl</strong> e toque rapidamente na tecla <strong>V</strong>.</p>
             <p>Você deve responder todas as perguntas corretamente antes de continuar.</p>
         </div>
-        <br> 
-        <hr> 
-        <div class="container"> 
-            <div class="respostas"> 
-                <h3>Respostas:</h3> 
-                <p>A. Briófitas</p> 
-                <hr> 
-                <p>B. Pteridófitas</p> 
-                <hr> 
-                <p>C. Angiospermas</p> 
-                <hr> 
-                <p>D. Gimnospermas</p> 
-            </div> 
-            <div class="perguntas"> 
-                <h4>Questões:</h4> 
-                <p>Qual é o grupo de plantas que geralmente é encontrado em ambientes úmidos, não possui vasos condutores de seiva e não produz flores nem sementes?</p> 
-                <p> <input type="text" id="1resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '1resposta')"></p> 
-                <picture> <img id="1img" class="bd" src="/imagens/2page20.png"></picture> 
-                <p id="1mensagem" style="color: red;"></p> 
-                <hr> 
-                <p>Que grupo de plantas possui vasos condutores de seiva, mas ainda se reproduz por meio de esporos em vez de sementes?</p> 
-                <p> <input type="text" id="2resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '2resposta')"></p> 
-                <picture> <img id="2img" class="bd" src="/imagens/2page20.png"></picture> 
-                <p id="2mensagem" style="color: red;"></p> 
-                <hr> 
-                <p>Quais plantas têm sementes nuas, sem a proteção de frutos, e frequentemente possuem folhas em forma de agulha?</p> 
-                <p> <input type="text" id="3resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '3resposta')"></p> 
-                <picture> <img id="3img" class="bd" src="/imagens/2page20.png"></picture> 
-                <p id="3mensagem" style="color: red;"></p> 
-                <hr> 
-                <p> Que tipo de plantas produz flores e sementes encapsuladas em frutos?</p> 
-                <p> <input type="text" id="4resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '4resposta')"></p> 
-                <picture> <img id="4img" class="bd" src="/imagens/2page20.png"></picture> 
-                <p id="4mensagem" style="color: red;"></p> 
-            </div>  
-            <div> 
-                <button id="botao" onclick="checkAllAnswers(), location = '38.html'">Continuar</button> 
-            </div> 
-    <script> 
-    let correctAnswers = { 
-        1: "Briófitas", 
-        2: "Pteridófitas", 
-        3: "Gimnospermas", 
-        4: "Angiospermas" 
-    }; 
-    function checkAnswer(questionNumber) { 
-        const inputElement = document.getElementById(questionNumber + "resposta"); 
-        const imageElement = document.getElementById(questionNumber + "img"); 
-        const messageElement = document.getElementById(questionNumber + "mensagem"); 
-        if (inputElement.value.trim().toLowerCase() === correctAnswers[questionNumber].toLowerCase()) {
-            imageElement.style.display = "block"; 
-            messageElement.textContent = ""; } 
-        else { 
-            imageElement.style.display = "none"; 
-            messageElement.textContent = "Resposta errada! Tente novamente!"; } 
-    } 
-    function checkAllAnswers() { 
-        let allAnswersCorrect = true; 
-        for (let i = 1; i <= 4; i++) { 
-            const imageElement = document.getElementById(i + "img"); 
-            if (imageElement.style.display !== "block") { 
-                allAnswersCorrect = false; 
-                break; 
-            } 
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Respostas:</th>
+                <th>Questões:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Briófitas</td>
+                <td>
+                    <h4>Qual é o grupo de plantas que geralmente é encontrado em ambientes úmidos, não possui vasos condutores de seiva e não produz flores nem sementes?</h4>
+                    <p> <input type="text" id="1resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '1resposta')"></p>
+                    <picture> <img id="1img" class="bd"  src="/imagens/2page20.png"></picture>
+                    <p id="1mensagem" style="color: red;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Pteridófitas</td>
+                <td>
+                    <h4>Que grupo de plantas possui vasos condutores de seiva, mas ainda se reproduz por meio de esporos em vez de sementes?</h4>
+                    <p> <input type="text" id="2resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '2resposta')"></p>
+                    <picture> <img id="2img" class="bd"  src="/imagens/2page20.png"></picture>
+                    <p id="2mensagem" style="color: red;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Angiospermas</td>
+                <td>
+                    <h4>Quais plantas têm sementes nuas, sem a proteção de frutos, e frequentemente possuem folhas em forma de agulha?</h4>
+                    <p> <input type="text" id="3resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '3resposta')"></p>
+                    <picture> <img id="3img" class="bd"  src="/imagens/2page20.png"></picture>
+                    <p id="3mensagem" style="color: red;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Gimnospermas</td>
+                <td>
+                    <h4> Que tipo de plantas produz flores e sementes encapsuladas em frutos?</h4>
+                    <p> <input type="text" id="4resposta" placeholder="Cole aqui" readonly onpaste="handlePaste(event, '4resposta')"></p>
+                    <picture> <img id="4img" class="bd"  src="/imagens/2page20.png"></picture>
+                    <p id="4mensagem" style="color: red;"></p>
+                    <button id="botao" onclick="checkAllAnswers();location = '38.html'">Continuar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    var nome = localStorage.getItem("nome");
+    var sobrenome = localStorage.getItem("sobrenome");
+    if (nome && sobrenome) {
+        var saudacao = "Olá, " + nome + " " + sobrenome + "!";
+        document.getElementById("resposta").textContent = saudacao;
+    }
+
+    
+    let correctAnswers = {
+            1: "Briófitas",
+            2: "Pteridófitas",
+            3: "Gimnospermas",
+            4: "Angiospermas"
+        };
+
+        function checkAnswer(questionNumber) {
+            const inputElement = document.getElementById(questionNumber + "resposta");
+            const imageElement = document.getElementById(questionNumber + "img");
+            const messageElement = document.getElementById(questionNumber + "mensagem");
+
+            if (inputElement.value.trim().toLowerCase() === correctAnswers[questionNumber].toLowerCase()) {
+                imageElement.style.display = "block";
+                messageElement.textContent = "";
+            } else {
+                imageElement.style.display = "none";
+                messageElement.textContent = "Resposta errada! Tente novamente!";
+            }
         }
-        if (allAnswersCorrect) { 
-            document.getElementById("botao").style.display = "block"; 
-        } 
-        else {  
-            document.getElementById("botao").style.display = "none"; 
+
+        function checkAllAnswers() {
+            let allAnswersCorrect = true;
+
+            for (let i = 1; i <= 4; i++) {
+                const imageElement = document.getElementById(i + "img");
+                if (imageElement.style.display !== "block") {
+                    allAnswersCorrect = false;
+                    break;
+                }
+            }
+
+            if (allAnswersCorrect) {
+                document.getElementById("botao").style.display = "block";
+            } else {
+                document.getElementById("botao").style.display = "none";
+            }
         }
-    } 
-    function handlePaste(event, inputId) { 
-        event.preventDefault(); 
-        const clipboardData = event.clipboardData || window.clipboardData; 
-        const pastedData = clipboardData.getData("text/plain"); 
-        document.getElementById(inputId).value = pastedData; 
-        checkAnswer(inputId.charAt(0)); // Check the answer after pasting checkAllAnswers(); // Check if all answers are correct 
-    } 
-    </script>
+
+        function handlePaste(event, inputId) {
+            event.preventDefault();
+            const clipboardData = event.clipboardData || window.clipboardData;
+            const pastedData = clipboardData.getData("text/plain");
+            document.getElementById(inputId).value = pastedData;
+            checkAnswer(inputId.charAt(0)); // Check the answer after pasting
+            checkAllAnswers(); // Check if all answers are correct
+        }
+</script>
 </html>

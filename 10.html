@@ -17,6 +17,25 @@
     #dez{
         cursor: pointer;
     }
+    .cont{
+        padding: 2%;
+        border: dotted;
+        width: 600px;
+        height: auto;
+        position: relative;
+        left: 35%;
+        bottom: 50px;
+    }
+    #mario,
+    #zelda,
+    #metroid{
+        width: 180px;
+        height: 130px;
+    }
+    .imagens{
+        display: flex;
+        justify-content: space-between;
+    }
 </style>
 <body>
     <div class="titulo">
@@ -35,6 +54,14 @@
         <p id="cinco"onclick="location = '5.html'">5</p>
         <p id="cinco"onclick="location = '5.html'">5</p>
         <p id="cinco"onclick="location = '5.html'">5</p>
+    </div>
+    <div class="cont">
+        <p>Essas são as telas iniciais que demonstram como os gráficos de 16 bits transcendiam as limitações da época, ilustrando a criatividade e inovação por trás de cada um. "Super Mario World" nos recebe com o vibrante Mundo dos Dinossauros, enquanto "The Legend of Zelda: A Link to the Past" nos leva à vastidão de Hyrule, e "Super Metroid" nos imerge nas sombrias profundezas de Zebes. Cada um destes jogos da era dos 16 bits apresentou uma riqueza visual e narrativa, provando que a evolução tecnológica estava levando os videogames a novas alturas, permitindo aos jogadores explorar mundos ricos e envolventes de maneiras que antes eram inimagináveis na era dos 8 bits.</p>
+        <div class="imagens">
+            <picture><img id="mario" src="/imagens/tela-iicial-mario-2.gif" alt=""></picture>
+            <picture><img id="zelda" src="/imagens/tela-inicial-zelda-2.gif" alt=""></picture>
+            <picture><img id="metroid" src="/imagens/tela-inicial-metroid-2.gif" alt=""></picture>
+        </div>
     </div>
 </body>
 </html>

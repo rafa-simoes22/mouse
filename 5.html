@@ -15,6 +15,26 @@
         cursor: pointer;
         font-size: 40px;
     }
+    .cont{
+        padding: 2%;
+        border: dotted;
+        width: 600px;
+        height: auto;
+        position: relative;
+        left: 45%;
+        bottom: 50px;
+    }
+    #mario,
+    #zelda,
+    #metroid{
+        width: 180px;
+        height: 130px;
+        
+    }
+    .imagens{
+        display: flex;
+        justify-content: space-between;
+    }
 </style>
 <body>
     <div class="titulo">
@@ -24,6 +44,14 @@
         <span id="texto">Clique no número 5 acima.(os números são um pouco menores agora)</span>
         <div>
             <span id="cinco" onclick="location = '6.html'">5</span>
+        </div>
+        <div class="cont">
+            <p>Essas são as telas iniciais em que os gráficos de 8 bits ganhavam vida de forma incrível, desafiando as limitações da época e demonstrando a criatividade e inovação por trás de cada um. "Super Mario Bros." nos cumprimenta com um Reino dos Cogumelos colorido, enquanto "The Legend of Zelda" nos transporta para a vastidão de Hyrule, e "Metroid" nos mergulha nas profundezas alienígenas de Zebes.</p>
+            <div class="imagens">
+                <picture><img id="mario" src="/imagens/tela-inicial-mario" alt=""></picture>
+                <picture><img id="zelda" src="/imagens/tela-inicial-zelda.gif" alt=""></picture>
+                <picture><img id="metroid" src="/imagens/tela-inicial-metroid.gif" alt=""></picture>
+            </div>
         </div>
     </div>
 </body>

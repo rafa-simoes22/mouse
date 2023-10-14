@@ -17,6 +17,24 @@
         position: relative;
         left: 20%;
     }
+    .cont{
+        padding: 2%;
+        border: dotted;
+        width: 600px;
+        height: auto;
+        position: relative;
+        top: 15px;
+    }
+    #sonic,
+    #kong,
+    #crash{
+        width: 180px;
+        height: 130px;
+    }
+    .imagens{
+        display: flex;
+        justify-content: space-between;
+    }
 </style>
 <body>
     <div class="titulo">
@@ -26,6 +44,16 @@
         <p>Na verdade, eles podem aparecer de muitas maneiras diferentes. Clique no botão abaixo para continuar.</p>
         <div>
             <button id="botão" onclick="location = '17.html'">Ei, isso é legal!</button>
+        </div>
+    </div>
+    <div class="cont">
+        <p>Na era dos 8 bits, a tela inicial de "Sonic the Hedgehog" se destacava pela sua simplicidade, apresentando um fundo azul sólido com o logotipo do jogo e o Sonic, o ouriço azul, em sua clássica pose determinada. Os gráficos de 8 bits limitados eram evidentes, mas o uso de cores vibrantes e a presença do carismático Sonic eram suficientes para cativar os jogadores e gerar entusiasmo.</p>
+        <p>Com a transição para a era dos 16 bits, a tela inicial de "Donkey Kong Country" surpreendia os jogadores com gráficos excepcionais. Utilizando gráficos 3D pré-renderizados, a tela de título mostrava Donkey Kong e Diddy Kong em um cenário deslumbrante e detalhado, criando uma impressão imediata de qualidade visual. As cores vivas e os detalhes impressionantes sublinhavam a evolução tecnológica da era dos 16 bits.</p>
+        <p>Na era dos 32 bits, "Crash Bandicoot" apresentava uma tela inicial que marcava a transição para o ambiente 3D. Com animações suaves e uma sensação tridimensional, a tela inicial de "Crash Bandicoot" proporcionava aos jogadores uma visão mais dinâmica e imersiva. As cores eram vibrantes e a introdução de Crash Bandicoot, com sua expressão irreverente, transmitia a atmosfera do jogo de forma eficaz.</p>
+        <div class="imagens">
+            <picture><img id="sonic" src="/imagens/tela-inicial-sonic.gif" alt=""></picture>
+            <picture><img id="kong" src="/imagens/tela-inicial-kong.gif" alt=""></picture>
+            <picture><img id="crash" src="/imagens/tela-inicial-crash.gif" alt=""></picture>
         </div>
     </div>
 </body>

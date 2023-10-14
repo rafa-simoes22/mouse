@@ -16,6 +16,24 @@
         position: relative;
         left: 20%;
     }
+    .cont{
+        padding: 2%;
+        border: dotted;
+        width: 650px;
+        height: auto;
+        position: relative;
+        top: 15px;
+    }
+    #sonic,
+    #kong,
+    #crash{
+        width: 210px;
+        height: 130px;
+    }
+    .imagens{
+        display: flex;
+        justify-content: space-between;
+    }
 </style>
 <body>
     <div class="titulo">
@@ -25,6 +43,18 @@
         <p>Os botões podem ter muitos rótulos de texto diferentes. Clique no botão "Ir" abaixo para continuar.</p>
         <div>
             <button id="botão" onclick="location = '16.html'">Ir</button>
+        </div>
+    </div>
+    <div class="cont">
+        <h3>Conheça outros jogos das diferentes eras, desde os 8 bits até os 32 bits, que deixaram uma marca inesquecível na história dos videogames:</h3>
+        <p>Na era dos 8 bits, um personagem carismático e veloz conquistou os corações dos jogadores: Sonic the Hedgehog. Lançado pela SEGA em 1991, o Sonic trouxe velocidade e ação a um novo nível, com gráficos coloridos e trilhas sonoras cativantes. O ouriço azul se tornou um ícone dos jogos eletrônicos e desencadeou uma série de títulos de sucesso.</p>
+        <p>À medida que os videogames evoluíam para a era dos 16 bits, "Donkey Kong Country" emergiu como um título revolucionário. Desenvolvido pela Rare e lançado pela Nintendo em 1994, o jogo introduziu gráficos 3D pré-renderizados que impressionaram os jogadores com sua qualidade visual. A jornada de Donkey Kong e Diddy Kong para recuperar seu tesouro roubado por King K. Rool oferecia uma jogabilidade divertida e desafiadora, tornando-o um marco da era dos 16 bits.</p>
+        <p>Finalmente, na era dos 32 bits, "Crash Bandicoot" invadiu a cena dos videogames. Lançado em 1996 pela Naughty Dog para o PlayStation, o jogo trouxe uma narrativa hilária e jogabilidade divertida em um ambiente 3D. A personalidade cativante de Crash e os desafios emocionantes fizeram dele um sucesso instantâneo. O jogo marcou o início de uma série popular e influenciou os jogos de plataforma em 3D.</p>
+        <p>Estes jogos representam momentos cruciais na evolução dos videogames, desde os humildes 8 bits até os 32 bits, e mostram como a criatividade e a inovação sempre foram fundamentais na indústria de jogos eletrônicos. Eles continuam a ser celebrados e apreciados por jogadores de todas as idades, provando que os clássicos são eternos.</p>
+        <div class="imagens">
+            <picture><img id="sonic" src="/imagens/sonic.gif" alt=""></picture>
+            <picture><img id="kong" src="/imagens/kong.gif" alt=""></picture>
+            <picture><img id="crash" src="/imagens/crash.gif" alt=""></picture>
         </div>
     </div>
 </body>

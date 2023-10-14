@@ -8,10 +8,10 @@
 </head>
 <style>
     img{
-        width: 200px;
-        height: 130px;
+        width: 265px;
+        height: 200px;
     }
-    #dog{
+    #virtual{
         cursor: pointer;
     }
     #texto{
@@ -19,12 +19,11 @@
         flex-direction: column;
         align-items: center;
     }
-    .imagem{
-        display: flex;
-        align-items: center;
-        gap: 5%;
-        height: auto;
-        width: 700px;
+    table{
+        border-collapse: collapse;
+    }
+    td{
+        border: dotted;
     }
 </style>
 <body>
@@ -33,20 +32,25 @@
     </div>
     <div id="texto">
         <p>As imagens também podem ser clicáveis. Imagens clicáveis geralmente fazem com que o cursor do mouse mude para o formato de “mão” quando o cursor se move sobre a imagem.</p>
-        <p >Esses são as telas iniciais dos jogos mostrados anteriormente nos dias atuais. Uma das imagens abaixo é clicável. Encontre-o e clique nele para avançar para a próxima tela.</p>
-        <div class="imagem">
-            <img id="dog" src="./imagens/dog.jfif" onclick="location = '18.html'"/>
-            <img src="/imagens/marioNew.webp"/>
-            <img src="/imagens/zeldaNew.jpg"/>
-            <img src="/imagens/metroidNew.webp"/>
-            <img src="/imagens/fantasyNew.jpg"/>
-            <img src="/imagens/residentNew.avif"/>
-            <img src="/imagens/nightsNew.png"/>
-            <img src="/imagens/virtualNew.webp"/>
-            <img src="/imagens/sonicNew.jpg"/>
-            <img src="/imagens/kongNew.jpg"/>
-            <img src="/imagens/crashNew.avif"/>
-        </div>
+        <p>Esses são os jogos mostrados anteriormente nos dias de hoje. Uma das imagens abaixo é clicável. Encontre-o e clique nele para avançar para a próxima tela.</p>
     </div>
+    <table>
+        <tbody>
+            <tr>
+                <td><picture><img src="/imagens/marioNew.webp"/></picture></td>
+                <td><picture><img src="/imagens/zeldaNew.jpg"/></picture></td>
+                <td><picture><img src="/imagens/metroidNew.webp"/></picture></td>
+                <td><picture><img src="/imagens/fantasyNew.jpg"/></picture></td>
+                <td><picture><img src="/imagens/crashNew.avif"/></picture></td>
+            </tr>
+            <tr>
+                <td><picture><img src="/imagens/residentNew.avif"/></picture></td>
+                <td><picture><img src="/imagens/nightsNew.png"/></picture></td>
+                <td><picture><img id="virtual" src="/imagens/virtualNew.webp" onclick="location = '18.html'" /></picture></td>
+                <td><picture><img src="/imagens/sonicNew.jpg"/></picture></td>
+                <td><picture><img src="/imagens/kongNew.jpg"/></picture></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

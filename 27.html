@@ -12,27 +12,32 @@
         flex-direction: column;
         align-items: center;
     }
-    .square {
-        width: 100px;
-        height: 100px;
-        background-color: red;
+        #foo {
         position: absolute;
-        cursor: grab;
-    }
-    .text {
-        border: solid 2px;
+        z-index: 1000;
         width: 200px;
         height: 200px;
+        background-color: red;
+    }
+
+    .isMoving {
+        z-index: 1001 !important;
+    }
+
+    #button {
+        display: none;
+        position: absolute;
+        top: 470px;
+        left: 50%;
+    }
+
+    #delimiting-area {
         position: absolute;
         top: 250px;
-        left: 810px;
-    }
-    #continue-button {
-        /**display: none;**/
-        position: absolute;
-        top: 480px;
-        left: 880px;
-        cursor: pointer;
+        left: 45%;
+        width: 200px;
+        height: 200px;
+        border: 2px solid;
     }
 </style>
 <body>
@@ -41,48 +46,74 @@
     </div>
     <div class="cont">
         <p>“Clicar e arrastar” é uma forma de mover determinados objetos na tela. Para mover um objeto, coloque o cursor do mouse sobre ele, pressione e segure o botão esquerdo do mouse e mova o mouse. Depois de "arrastar" o objeto para o local desejado, solte o botão do mouse.</p> 
-        <p>Clique e arraste o quadrado vermelho para que fique ao centro do quadrado maior</p>
+        <p>Clique e arraste o quadrado vermelho para que fique dentro do quadrado maior</p>
     </div>
 
-    <div class="square" id="drag-me"></div>
-    <div class="text"></div>
-    <button id="continue-button" onclick="location = '28.html'" >Continuar</button>
+    <div id="foo"></div>
+    <button id="button" onclick="location = '28.html'">Continuar</button>
+    <div id="delimiting-area"></div>
 </body>
 <script>
-    const square = document.getElementById('drag-me');
-    const continueButton = document.getElementById('continue-button');
+    window.onload = function () {
+        Dragable(document.getElementById("foo"));
+    };
 
-    let isDragging = false;
-    let offsetX, offsetY;
-
-    square.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        offsetX = e.clientX - square.getBoundingClientRect().left;
-        offsetY = e.clientY - square.getBoundingClientRect().top;
-        square.style.cursor = 'grabbing';
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const x = e.clientX - offsetX;
-        const y = e.clientY - offsetY;
-
-    square.style.transform = `translate(${x}px, ${y}px)`;
-        if (
-            x >= 800 &&
-            x <= 800 + 100 &&
-            y >= 100 &&
-            y <= 100 + 50
-        ) {
-            continueButton.style.display = 'block';
-        } else {
-            continueButton.style.display = 'none';
+    function addEvent(el, type, callback) {
+        if (el.addEventListener) {
+            el.addEventListener(type, callback);
+        } else if (el.attachEvent) {
+            el.attachEvent("on" + type, callback);
         }
-    });
+    }
 
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-        square.style.cursor = 'grab';
-    });
+    function Dragable(el) {
+        var isMove = false,
+            x = 0, y = 0,
+            xel = 0, yel = 0;
+
+        addEvent(el, "mousedown", function (e) {
+            isMove = true;
+            el.className += " isMoving";
+            x = window.event ? window.event.clientX : e.pageX;
+            y = window.event ? window.event.clientY : e.pageY;
+            xel = x - el.offsetLeft;
+            yel = y - el.offsetTop;
+        });
+
+        addEvent(document, "mousemove", function (e) {
+            if (isMove) {
+                e.preventDefault();
+                x = window.event ? window.event.clientX : e.pageX;
+                y = window.event ? window.event.clientY : e.pageY;
+                el.style.left = (x - xel) + 'px';
+                el.style.top  = (y - yel) + 'px';
+
+                // Verifique se o quadrado está dentro da área delimitada
+                var delimitingArea = document.getElementById('delimiting-area');
+                if (isInside(el, delimitingArea)) {
+                    document.getElementById('button').style.display = 'block';
+                } else {
+                    document.getElementById('button').style.display = 'none';
+                }
+            }
+        });
+
+        addEvent(document, "mouseup", function () {
+            el.className = String(el.className).replace(/(^|\s)isMoving(\s|$)/g, " ");
+            isMove = false;
+        });
+    };
+
+    function isInside(element, container) {
+        var rectElement = element.getBoundingClientRect();
+        var rectContainer = container.getBoundingClientRect();
+        
+        return (
+            rectElement.left >= rectContainer.left &&
+            rectElement.right <= rectContainer.right &&
+            rectElement.top >= rectContainer.top &&
+            rectElement.bottom <= rectContainer.bottom
+        );
+    }
 </script>
 </html>

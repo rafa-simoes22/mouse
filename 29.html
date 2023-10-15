@@ -11,66 +11,49 @@
         width: 100px;
         height: 200px;
     }
-    #botao{
-        display: none;
-    }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
-    <div>
-        <p>Selecione uma ou mais opções nas caixas de seleção abaixo e clique no botão 'Continuar'.	</p>
-    </div>
-    <div class="checbox">
-        <input type="checkbox" id="1" onclick="um()"/>
+    <p>Selecione uma ou mais opções nas caixas de seleção abaixo e clique no botão 'Continuar'.	</p>
+    <div class="checkbox">
+        <input type="checkbox" id="1" onclick="verificarCheckboxes()"/>
         <label for="1">Um</label>
         <br>
-        <input type="checkbox" id="2" onclick="dois()"/>
+        <input type="checkbox" id="2" onclick="verificarCheckboxes()"/>
         <label for="2">Dois</label>
         <br>
-        <input type="checkbox" id="3" onclick="tres()"/>
+        <input type="checkbox" id="3" onclick="verificarCheckboxes()"/>
         <label for="3">Tres</label>
         <br>
-        <input type="checkbox" id="4" onclick="quatro()"/>
+        <input type="checkbox" id="4" onclick="verificarCheckboxes()"/>
         <label for="4">Quatro</label>
         <br>
-        <input type="checkbox" id="5" onclick="cinco()"/>
+        <input type="checkbox" id="5" onclick="verificarCheckboxes()"/>
         <label for="5">Cinco</label>
         <br>
     </div>
     <br>
-    <button id="botao" onclick="location = '30.html'">Continuar</button>
+    <button id="botao" style="display:none" onclick="location = '30.html'">Continuar</button>
 </body>
 <script>
-    var check = 0
-    var tcheck = 1
+    function verificarCheckboxes() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var botao = document.getElementById('botao');
+        var checkedCheckboxes = 0;
 
-    function vcheck(){
-        if(check===tcheck) {
-            document.getElementById("botao").style.display = "block"; 
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                checkedCheckboxes++;
+            }
         }
-    }
-    
-    function um(){
-        check ++;
-        vcheck();
-    }
-    function dois(){
-        check ++;
-        vcheck();
-    }
-    function tres(){
-        check ++;
-        vcheck();
-    }
-    function quatro(){
-        check ++;
-        vcheck();
-    }
-    function cinco(){
-        check ++;
-        vcheck();
+
+        if (checkedCheckboxes > 0) {
+            botao.style.display = 'block';
+        } else {
+            botao.style.display = 'none';
+        }
     }
 </script>
 </html>

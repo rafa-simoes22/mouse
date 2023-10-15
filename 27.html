@@ -12,32 +12,34 @@
         flex-direction: column;
         align-items: center;
     }
-        #foo {
+    #foo {
         position: absolute;
         z-index: 1000;
         width: 200px;
         height: 200px;
         background-color: red;
     }
-
     .isMoving {
         z-index: 1001 !important;
     }
-
     #button {
         display: none;
         position: absolute;
         top: 470px;
         left: 50%;
     }
-
     #delimiting-area {
         position: absolute;
         top: 250px;
         left: 45%;
         width: 200px;
         height: 200px;
-        border: 2px solid;
+        border: 5px solid;
+    }
+    #kong {
+        display: none;
+        width: 300px;
+        align-items: center;
     }
 </style>
 <body>
@@ -48,10 +50,10 @@
         <p>“Clicar e arrastar” é uma forma de mover determinados objetos na tela. Para mover um objeto, coloque o cursor do mouse sobre ele, pressione e segure o botão esquerdo do mouse e mova o mouse. Depois de "arrastar" o objeto para o local desejado, solte o botão do mouse.</p> 
         <p>Clique e arraste o quadrado vermelho para que fique dentro do quadrado maior</p>
     </div>
-
     <div id="foo"></div>
     <button id="button" onclick="location = '28.html'">Continuar</button>
     <div id="delimiting-area"></div>
+    <figure><img id="kong" src="/imagens/kongserio.gif" alt=""></figure>
 </body>
 <script>
     window.onload = function () {
@@ -92,8 +94,10 @@
                 var delimitingArea = document.getElementById('delimiting-area');
                 if (isInside(el, delimitingArea)) {
                     document.getElementById('button').style.display = 'block';
+                    document.getElementById('kong').style.display = 'block';
                 } else {
                     document.getElementById('button').style.display = 'none';
+                    document.getElementById('kong').style.display = 'none';
                 }
             }
         });

@@ -14,6 +14,12 @@
     #botao{
         display: none;
     }
+    img{
+        position: relative;
+        left: 30%;
+        bottom: 230px;
+        display: none;
+    }
 </style>
 <body>
     <div class="titulo">
@@ -22,39 +28,42 @@
     <div>
         <p>As caixas de seleção permitem selecionar uma ou mais opções de um grupo de opções. Clique dentro de cada uma das caixas de seleção brancas abaixo para continuar.</p>
     </div>
-    <div class="checbox">
-        <div class="checkbox">
-            <input type="checkbox" id="1" onclick="check(1)"/>
-            <label for="1">Um</label>
-            <br>
-            <input type="checkbox" id="2" onclick="check(2)"/>
-            <label for="2">Dois</label>
-            <br>
-            <input type="checkbox" id="3" onclick="check(3)"/>
-            <label for="3">Tres</label>
-            <br>
-            <input type="checkbox" id="4" onclick="check(4)"/>
-            <label for="4">Quatro</label>
-            <br>
-            <input type="checkbox" id="5" onclick="check(5)"/>
-            <label for="5">Cinco</label>
-            <br>
-            <input type="checkbox" id="6" onclick="check(6)"/>
-            <label for="6">Seis</label>
-            <br>
-            <input type="checkbox" id="7" onclick="check(7)"/>
-            <label for="7">Sete</label>
-            <br>
-            <input type="checkbox" id="8" onclick="check(8)"/>
-            <label for="8">Oito</label>
-            <br>
-            <input type="checkbox" id="9" onclick="check(9)"/>
-            <label for="9">Nove</label>
-            <br>
-            <input type="checkbox" id="10" onclick="check(10)"/>
-            <label for="10">Dez</label>
-    <br>
-    <button id="botao" onclick="location = '29.html'">Continuar</button>
+    <div class="checkbox">
+        <input type="checkbox" id="1" onclick="check(1)"/>
+        <label for="1">Mario (Super Mario Bros.)</label>
+        <br>
+        <input type="checkbox" id="2" onclick="check(2)"/>
+        <label for="2">Sonic (Sonic the Hedgehog)</label>
+        <br>
+        <input type="checkbox" id="3" onclick="check(3)"/>
+        <label for="3">Donkey Kong (Donkey Kong)</label>
+        <br>
+        <input type="checkbox" id="4" onclick="check(4)"/>
+        <label for="4">Link (The Legend of Zelda)</label>
+        <br>
+        <input type="checkbox" id="5" onclick="check(5)"/>
+        <label for="5">Crash Bandicoot (Crash Bandicoot)</label>
+        <br>
+        <input type="checkbox" id="6" onclick="check(6)"/>
+        <label for="6">Diddy Kong (Donkey Kong Country)</label>
+        <br>
+        <input type="checkbox" id="7" onclick="check(7)"/>
+        <label for="7">Nights (Nights into Dreams)</label>
+        <br>
+        <input type="checkbox" id="8" onclick="check(8)"/>
+        <label for="8">Sephiroth (Final Fantasy VII)</label>
+        <br>
+        <input type="checkbox" id="9" onclick="check(9)"/>
+        <label for="9">Leon S. Kennedy (Resident Evil)</label>
+        <br>
+        <input type="checkbox" id="10" onclick="check(10)"/>
+        <label for="10">Samus Aran (Metroid)</label>
+        <br>
+        <button id="botao" onclick="location = '29.html'">Continuar</button>
+    </div>
+    <div class="imagem">
+        <figure><img id="kong" src="/imagens/kongDançando.gif" alt=""></figure>
+    </div>
 </body>
 <script>
     var checkboxes = new Array(10).fill(false);
@@ -65,8 +74,10 @@ function check(index) {
 
     if (checkCount === 10) {
         document.getElementById("botao").style.display = "block";
+        document.getElementById("kong").style.display = "block";
     } else {
         document.getElementById("botao").style.display = "none";
+        document.getElementById("kong").style.display = "none";
     }
 }
 </script>

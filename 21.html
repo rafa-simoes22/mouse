@@ -7,6 +7,16 @@
     <title>Mousercise</title>
 </head>
 <style>
+    img{
+        width: 300px;
+        height: 280px;
+    }
+    #btcontinue3{
+        display: none;
+        position: relative;
+        left: 30%;
+        bottom: 120px;
+    }
     #boo1{
         cursor: pointer;
     }
@@ -16,17 +26,18 @@
         <h1>Mousercise</h1>
     </div>
     <div>
-        <p>Clique duas vezes em cada um dos fogos de artifício abaixo para acioná-los e, em seguida, continue para a próxima página.</p>
+        <p>Clique duas vezes no cogumelo abaixo, em seguida, continue para a próxima página.</p>
         <div class="boo">
-            <picture><img  id="boo1" src="./imagens/page20.png" ondblclick="altimg()"></picture>
+            <picture><img  id="boo1" src="./imagens/cogumelo01.jfif" ondblclick="altimg()"></picture>
         </div>
         <button id="btcontinue3" onclick="location = '22.html'">Continue</button>
     </div>
 </body>
 <script>
-    const caminhoNovaImagem = src="./imagens/2page20.png"
+    const caminhoNovaImagem = src="imagens/cogumelo02.webp"
     function altimg(){
         document.getElementById("boo1").src = caminhoNovaImagem;
+        document.getElementById("btcontinue3").style.display = "block";
     }
 </script>
 </html>

@@ -6,6 +6,15 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Mousercise</title>
 </head>
+<style>
+    figure{
+        display: flex;
+        justify-content: center;
+    }
+    #mario{
+        width: 300px;
+    }
+</style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
@@ -16,6 +25,7 @@
         <p>Clique no link abaixo para exibir uma caixa de mensagem, leia a mensagem e clique no botão apropriado na caixa.</p>
         <a href="#" onclick="mensagem()">Clique em mim para exibir uma caixa de mensagem</a>
     </div>
+    <figure><img id="mario" src="/imagens/marioCorrendo.gif" alt=""></figure>
 </body>
 <script>
     function mensagem() {

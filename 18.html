@@ -7,7 +7,7 @@
     <title>Mousercise</title>
 </head>
 <style>
-    #texto{
+    .texto{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -16,37 +16,41 @@
         width: 200px;
         height: 130px;
     }
-    #baby{
+    #mario{
         cursor: pointer;
+    }
+    table{
+        border-collapse: collapse;
+        position: relative;
+        left: 12%;
+    }
+    td{
+        border: dotted;
     }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
-    <div>
-        <p id="texto">Imagens animadas também podem ser clicáveis. Encontre a imagem abaixo que pode ser clicada e clique nela para ir para a próxima tela.</p>
-        <div class="imagem">
-            <img id="baby" src="./imagens/baby.gif" onclick="location = '19.html'">
-            <img src="./imagens/sono.gif">
-            <img src="./imagens/sad.gif">
-        </div>
+    <div class="texto">
+        <p>Imagens animadas também podem ser clicáveis. Encontre a imagem abaixo que pode ser clicada e clique nela para ir para a próxima tela.</p>
+        <p>Olha só como os graficos mudaram!</p>
     </div>
     <table>
         <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><img id="mario" src="/imagens/marioNewgameplay.gif" alt="" onclick="location = '19.html'"></td>
+                <td><img src="/imagens/zeldaNewgameplay.gif" alt=""></td>
+                <td><img src="/imagens/metroidNewgameplay.gif" alt=""></td>
+                <td><img src="/imagens/fantasyNewgameplay.gif" alt=""></td>
+                <td><img src="/imagens/residentevilNewgameplay.gif" alt=""></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><img src="/imagens/nightsNewgameplay.gif" alt=""></td>
+                <td><img src="/imagens/virtualNewgameplay.gif" alt=""></td>
+                <td><img src="/imagens/sonicNewgameplay.gif" alt=""></td>
+                <td><img src="/imagens/kongNewgameplay.gif" alt=""></td>
+                <td><img src="/imagens/crashNewgameplay.gif" alt=""></td>
             </tr>
         </tbody>
     </table>

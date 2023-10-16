@@ -7,6 +7,10 @@
     <title>Mousercise</title>
 </head>
 <style>
+    img{
+        width: 300px;
+        height: 150px;
+    }
     #botao{
         display: none;
         position: relative;
@@ -32,13 +36,22 @@
         <option value="Nove">Nove</option>
         <option value="Dez">Dez</option>
     </select>
+    <picture><img id="zelda" src="/imagens/fantasy.gif" alt="" style="display: none;"></picture>
     <button id="botao" onclick="location = '36.html'">Continuar</button>
 </body>
 <script>
-    function botao(){
-        if (document.getElementById("lista").value == "Seis")
-            document.getElementById("botao").style.display = "block";
-        else document.getElementById("botao").style.display = "none";
+    function botao() {
+        var lista = document.getElementById("lista");
+        var botao = document.getElementById("botao");
+        var zelda = document.getElementById("zelda");
+
+        if (lista.value === "Seis") {
+            botao.style.display = "block";
+            zelda.style.display = "block";
+        } else {
+            botao.style.display = "none";
+            zelda.style.display = "none";
+        }
     }
 </script>
 </html>

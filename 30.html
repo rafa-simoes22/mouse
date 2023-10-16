@@ -10,6 +10,12 @@
     #botao{
         display: none;
     }
+    #mario{
+        display: none;
+        position: relative;
+        left: 20%;
+        bottom: 180px;
+    }
 </style>
 <body>
     <div class="titulo">
@@ -50,6 +56,7 @@
         <label for="option10">Dez</label>
     </div>
     <button id="botao" onclick="location = '31.html'">Continuar</button>
+    <picture><img id="mario" src="/imagens/mario30.gif" alt=""></picture>
 </body>
 <script>
     var selectedOptions = [];
@@ -60,6 +67,7 @@
         }
         if (selectedOptions.length === 10) {
             document.getElementById("botao").style.display = "block";
+            document.getElementById("mario").style.display = "block";
         }
     }
 </script>

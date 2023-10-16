@@ -7,15 +7,12 @@
     <title>Mousercise</title>
 </head>
 <style>
-    .radio{
-        width: 100px;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
     #botao{
         display: none;
+    }
+    img{
+        width: 300px;
+        height: 150px;
     }
 </style>
 <body>
@@ -23,50 +20,47 @@
         <h1>Mousercise</h1>
     </div>
     <div>
-        <p>Escolha um alimento nos botões de opção abaixo e clique no botão ‘Continuar’.</p>
+        <p>Escolha um jogo nos botões de opção abaixo e clique no botão ‘Continuar’.</p>
     </div>
     <div class="radio">
-        <input type="radio" name="option" id="1" onclick="um()"/>
-
-        <input type="radio" name="option" id="2" onclick="dois()"/>
-
-        <input type="radio" name="option" id="3" onclick="tres()"/>
-
-        <input type="radio" name="option" id="4" onclick="quatro()"/>
-
-        <input type="radio" name="option" id="5" onclick="cinco()"/>
+        <input type="radio" name="opcao" id="1" onclick="mostrarImagem(1)"/>
+        <label for="1">Mario</label>
+        <br>
+        <input type="radio" name="opcao" id="2" onclick="mostrarImagem(2)"/>
+        <label for="2">Kong</label>
+        <br>
+        <input type="radio" name="opcao" id="3" onclick="mostrarImagem(3)"/>
+        <label for="3">Crash</label>
     </div>
     <button id="botao" onclick="location = '32.html'">Continuar</button>
+    <img id="imagem1" src="/imagens/mario2.gif" style="display: none">
+    <img id="imagem2" src="/imagens/kong.gif" style="display:none">
+    <img id="imagem3" src="/imagens/crash.gif" style="display:none">
 </body>
 <script>
-    var check = 0
-    var tcheck = 1
+    var imagemAtual = null;
 
-    function vcheck(){
-        if(check===tcheck) {
-            document.getElementById("botao").style.display = "block"; 
+    function mostrarImagem(id) {
+        var botao = document.getElementById('botao');
+        var imagem = document.getElementById('imagem' + id);
+        
+        if (imagem.style.display === 'none' || imagem.style.display === '') {
+            imagem.style.display = 'block';
+            if (imagemAtual && imagemAtual !== imagem) {
+                imagemAtual.style.display = 'none';
+            }
+            imagemAtual = imagem;
+        } else {
+            imagem.style.display = 'none';
         }
-    }
-    
-    function um(){
-        check ++;
-        vcheck();
-    }
-    function dois(){
-        check ++;
-        vcheck();
-    }
-    function tres(){
-        check ++;
-        vcheck();
-    }
-    function quatro(){
-        check ++;
-        vcheck();
-    }
-    function cinco(){
-        check ++;
-        vcheck();
+
+        var radioButtons = document.querySelectorAll('input[name="opcao"]:checked');
+
+        if (radioButtons.length > 0) {
+            botao.style.display = 'block';
+        } else {
+            botao.style.display = 'none';
+        }
     }
 </script>
 </html>

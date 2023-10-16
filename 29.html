@@ -11,49 +11,89 @@
         width: 100px;
         height: 200px;
     }
+    #mapa{
+        width: 600px;
+        border: solid;
+        position: relative;
+        left: 15%;
+        bottom: 120px;
+        z-index: 1;
+    }
+    #imagem1,
+    #imagem2,
+    #imagem3,
+    #imagem4{
+        z-index: 2;
+        width: 100px;
+    }
+    #imagem1{
+        position: relative;
+        left: 18%;
+        bottom: 450px;
+    }
+    #imagem2{
+        position: relative;
+        left: 45%;
+        bottom: 400px;
+    }
+    #imagem3{
+        position: relative;
+        left: 30%;
+        bottom: 550px;
+    }
+    #imagem4{
+        position: relative;
+        left: 30%;
+        bottom: 250px;
+    }
 </style>
 <body>
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
-    <p>Selecione uma ou mais opções nas caixas de seleção abaixo e clique no botão 'Continuar'.	</p>
+    <p>Selecione uma ou mais opções nas caixas de seleção abaixo e clique no botão 'Continuar'.	Marque o caminho no mapa, pelas direçoes!</p>
     <div class="checkbox">
-        <input type="checkbox" id="1" onclick="verificarCheckboxes()"/>
-        <label for="1">Um</label>
+        <input type="checkbox" id="1" onclick="mostrarImagem(1)"/>
+        <label for="1">Oeste</label>
         <br>
-        <input type="checkbox" id="2" onclick="verificarCheckboxes()"/>
-        <label for="2">Dois</label>
+        <input type="checkbox" id="2" onclick="mostrarImagem(2)"/>
+        <label for="2">Leste</label>
         <br>
-        <input type="checkbox" id="3" onclick="verificarCheckboxes()"/>
-        <label for="3">Tres</label>
+        <input type="checkbox" id="3" onclick="mostrarImagem(3)"/>
+        <label for="3">Norte</label>
         <br>
-        <input type="checkbox" id="4" onclick="verificarCheckboxes()"/>
-        <label for="4">Quatro</label>
-        <br>
-        <input type="checkbox" id="5" onclick="verificarCheckboxes()"/>
-        <label for="5">Cinco</label>
+        <input type="checkbox" id="4" onclick="mostrarImagem(4)"/>
+        <label for="4">Sul</label>
         <br>
     </div>
     <br>
     <button id="botao" style="display:none" onclick="location = '30.html'">Continuar</button>
-</body>
-<script>
-    function verificarCheckboxes() {
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        var botao = document.getElementById('botao');
-        var checkedCheckboxes = 0;
-
-        for (var i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i].checked) {
-                checkedCheckboxes++;
+    <div class="imagem">
+        <img id="mapa" src="/imagens/mapa.jpg" alt="">
+        <img id="imagem1" src="/imagens/marioMapa.png" style="display: none">
+        <img id="imagem2" src="/imagens/marioMapa.png" style="display:none">
+        <img id="imagem3" src="/imagens/marioMapa.png" style="display:none">
+        <img id="imagem4" src="/imagens/marioMapa.png" style="display:none">
+    </div>
+    <script>
+        function mostrarImagem(id) {
+            var checkbox = document.getElementById(id);
+            var botao = document.getElementById('botao');
+            var imagem = document.getElementById('imagem' + id);
+        
+            if (checkbox.checked) {
+                imagem.style.display = 'block';
+            } else {
+                imagem.style.display = 'none';
+            }
+        
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            
+            if (checkboxes.length > 0) {
+                botao.style.display = 'block';
+            } else {
+                botao.style.display = 'none';
             }
         }
-
-        if (checkedCheckboxes > 0) {
-            botao.style.display = 'block';
-        } else {
-            botao.style.display = 'none';
-        }
-    }
-</script>
+    </script>    
 </html>

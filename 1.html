@@ -49,8 +49,8 @@
         localStorage.setItem("contador", "0");
         }
         // Adicione um evento de clique ao body1
-        const body1 = document.getElementById("html1");
-        body1.addEventListener('click', function() {
+        const html1 = document.getElementById("html1");
+        html1.addEventListener('click', function() {
             let contador = parseInt(localStorage.getItem("contador"));
             contador += 1;
             localStorage.setItem("contador", contador.toString());

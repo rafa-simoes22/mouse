@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html9">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,4 +65,17 @@
         <picture><img id="metroid" src="/imagens/metroid2.gif" alt=""></picture>
     </div>
 </body>
+<script>
+    // Inicializa o contador se ele não existir no localStorage
+    if (!localStorage.getItem("contador9")) {
+        localStorage.setItem("contador9", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html9 = document.getElementById("html9");
+        html9.addEventListener('click', function() {
+            let contador9 = parseInt(localStorage.getItem("contador9"));
+            contador9 += 1;
+            localStorage.setItem("contador9", contador9.toString());
+            });
+</script>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" id="html20">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Mousercise</title>
@@ -105,5 +105,20 @@
         document.getElementById("crash").style.display = "block";
     }
     }
+
+
+
+
+    // Inicializa o contador20 se ele não existir no localStorage
+    if (!localStorage.getItem("contador20")) {
+        localStorage.setItem("contador20", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html20 = document.getElementById("html20");
+        html20.addEventListener('click', function() {
+            let contador20 = parseInt(localStorage.getItem("contador20"));
+            contador20 += 1;
+            localStorage.setItem("contador20", contador20.toString());
+            });
 </script>
 </html>

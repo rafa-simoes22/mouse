@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html25">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,4 +39,17 @@
         <a href="#" onclick="location = '26.html'">Próximo</a>
     </div>
 </body>
+<script>
+    // Inicializa o contador25 se ele não existir no localStorage
+    if (!localStorage.getItem("contador25")) {
+        localStorage.setItem("contador25", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html25 = document.getElementById("html25");
+        html25.addEventListener('click', function() {
+            let contador25 = parseInt(localStorage.getItem("contador25"));
+            contador25 += 1;
+            localStorage.setItem("contador25", contador25.toString());
+            });
+</script>
 </html>

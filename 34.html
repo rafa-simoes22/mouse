@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html34">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,5 +66,20 @@
             zelda.style.display = "none";
         }
     }
+
+
+
+
+    // Inicializa o contador34 se ele não existir no localStorage
+    if (!localStorage.getItem("contador34")) {
+        localStorage.setItem("contador34", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html34 = document.getElementById("html34");
+        html34.addEventListener('click', function() {
+            let contador34 = parseInt(localStorage.getItem("contador34"));
+            contador34 += 1;
+            localStorage.setItem("contador34", contador34.toString());
+            });
 </script>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html22">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,5 +36,20 @@
             ação = location = '22.html'
         }
     }
+
+
+
+
+    // Inicializa o contador22 se ele não existir no localStorage
+    if (!localStorage.getItem("contador22")) {
+        localStorage.setItem("contador22", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html22 = document.getElementById("html22");
+        html22.addEventListener('click', function() {
+            let contador22 = parseInt(localStorage.getItem("contador22"));
+            contador22 += 1;
+            localStorage.setItem("contador22", contador22.toString());
+            });
 </script>
 </html>

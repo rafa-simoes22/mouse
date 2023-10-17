@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html32">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,5 +62,20 @@
             zelda.style.display = "none";
         }
     }
+
+
+
+
+    // Inicializa o contador32 se ele não existir no localStorage
+    if (!localStorage.getItem("contador32")) {
+        localStorage.setItem("contador32", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html32 = document.getElementById("html32");
+        html32.addEventListener('click', function() {
+            let contador32 = parseInt(localStorage.getItem("contador32"));
+            contador32 += 1;
+            localStorage.setItem("contador32", contador32.toString());
+            });
 </script>
 </html>

@@ -90,23 +90,185 @@
                 <td id="ck10"></td>
                 <td></td>
             </tr>
+            <tr>
+                <td>11</td>
+                <td>1</td>
+                <td id="ck11"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>1</td>
+                <td id="ck12"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>1</td>
+                <td id="ck13"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td id="ck14">1</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>1</td>
+                <td id="ck15"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>1</td>
+                <td id="ck16"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>1</td>
+                <td id="ck17"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>1</td>
+                <td id="ck18"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td></td>
+                <td id="ck19"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td></td>
+                <td id="ck20"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td></td>
+                <td id="ck21"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td></td>
+                <td id="ck22"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td></td>
+                <td id="ck23"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td></td>
+                <td id="ck24"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td></td>
+                <td id="ck25"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td></td>
+                <td id="ck26"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td></td>
+                <td id="ck27"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td></td>
+                <td id="ck28"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td></td>
+                <td id="ck29"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td></td>
+                <td id="ck30"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td></td>
+                <td id="ck31"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td></td>
+                <td id="ck32"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>33</td>
+                <td></td>
+                <td id="ck33"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td></td>
+                <td id="ck34"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td></td>
+                <td id="ck35"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td></td>
+                <td id="ck36"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td></td>
+                <td id="ck37"></td>
+                <td></td>
+            </tr>
         </tbody>
     </table>
     <button id="resetButton">Voltar ao Inicio</button>
 </body>
 <script>
     const resetButton = document.getElementById("resetButton");
-        resetButton.addEventListener('click', function() {
-            // Limpar o localStorage
-            localStorage.clear();
-            // Redirecionar para a página start.html
-            window.location.href = 'index.html';
-            // Limpar os dados da tabela definindo o conteúdo de cada célula como "0"
-            const cells = document.querySelectorAll("td");
-            cells.forEach(function(cell) {
-                cell.textContent = "0";
-            });
+    resetButton.addEventListener('click', function() {
+        // Limpar o localStorage
+        localStorage.clear();
+        // Redirecionar para a página start.html
+        window.location.href = 'index.html';
+        // Limpar os dados da tabela definindo o conteúdo de cada célula como "0"
+        const cells = document.querySelectorAll("td");
+        cells.forEach(function(cell) {
+            cell.textContent = "0";
         });
+    });
     
     // Recupera o valor do contador do localStorage
     const contador = localStorage.getItem("contador");
@@ -119,6 +281,34 @@
     const contador8 = localStorage.getItem("contador8");
     const contador9 = localStorage.getItem("contador9");
     const contador10 = localStorage.getItem("contador10");
+    const contador11 = localStorage.getItem("contador11");
+    const contador12 = localStorage.getItem("contador12");
+    const contador13 = localStorage.getItem("contador13");
+    const contador14 = localStorage.getItem("contador14");
+    const contador15 = localStorage.getItem("contador15");
+    const contador16 = localStorage.getItem("contador16");
+    const contador17 = localStorage.getItem("contador17");
+    const contador18 = localStorage.getItem("contador18");
+    const contador19 = localStorage.getItem("contador19");
+    const contador20 = localStorage.getItem("contador20");
+    const contador21 = localStorage.getItem("contador21");
+    const contador22 = localStorage.getItem("contador22");
+    const contador23 = localStorage.getItem("contador23");
+    const contador24 = localStorage.getItem("contador24");
+    const contador25 = localStorage.getItem("contador25");
+    const contador26 = localStorage.getItem("contador26");
+    const contador27 = localStorage.getItem("contador27");
+    const contador28 = localStorage.getItem("contador28");
+    const contador29 = localStorage.getItem("contador29");
+    const contador30 = localStorage.getItem("contador30");
+    const contador31 = localStorage.getItem("contador31");
+    const contador32 = localStorage.getItem("contador32");
+    const contador33 = localStorage.getItem("contador33");
+    const contador34 = localStorage.getItem("contador34");
+    const contador35 = localStorage.getItem("contador35");
+    const contador36 = localStorage.getItem("contador36");
+    const contador37 = localStorage.getItem("contador37");
+
 
     // Exibe o número de cliques realizados na célula com id "ck1"
     const resultadoCk1 = document.getElementById("ck1");
@@ -150,6 +340,87 @@
 
     const resultadoCk10 = document.getElementById("ck10");
     resultadoCk10.textContent = contador10;
+
+    const resultadoCk11 = document.getElementById("ck11");
+    resultadoCk11.textContent = contador11;
+
+    const resultadoCk12 = document.getElementById("ck12");
+    resultadoCk12.textContent = contador12;
+
+    const resultadoCk13 = document.getElementById("ck13");
+    resultadoCk13.textContent = contador13;
+
+    const resultadoCk14 = document.getElementById("ck14");
+    resultadoCk14.textContent = contador14;
+    
+    const resultadoCk15 = document.getElementById("ck15");
+    resultadoCk15.textContent = contador15;
+
+    const resultadoCk16 = document.getElementById("ck16");
+    resultadoCk16.textContent = contador16;
+
+    const resultadoCk17 = document.getElementById("ck17");
+    resultadoCk17.textContent = contador17;
+
+    const resultadoCk18 = document.getElementById("ck18");
+    resultadoCk18.textContent = contador18;
+
+    const resultadoCk19 = document.getElementById("ck19");
+    resultadoCk19.textContent = contador19;
+
+    const resultadoCk20 = document.getElementById("ck20");
+    resultadoCk20.textContent = contador20;
+
+    const resultadoCk21 = document.getElementById("ck21");
+    resultadoCk21.textContent = contador21;
+
+    const resultadoCk22 = document.getElementById("ck22");
+    resultadoCk22.textContent = contador22;
+
+    const resultadoCk23 = document.getElementById("ck23");
+    resultadoCk23.textContent = contador23;
+
+    const resultadoCk24 = document.getElementById("ck24");
+    resultadoCk24.textContent = contador24;
+    
+    const resultadoCk25 = document.getElementById("ck25");
+    resultadoCk25.textContent = contador25;
+
+    const resultadoCk26 = document.getElementById("ck26");
+    resultadoCk26.textContent = contador26;
+
+    const resultadoCk27 = document.getElementById("ck27");
+    resultadoCk27.textContent = contador27;
+
+    const resultadoCk28 = document.getElementById("ck28");
+    resultadoCk28.textContent = contador28;
+
+    const resultadoCk29 = document.getElementById("ck29");
+    resultadoCk29.textContent = contador29;
+
+    const resultadoCk30 = document.getElementById("ck30");
+    resultadoCk30.textContent = contador30;
+
+    const resultadoCk31 = document.getElementById("ck31");
+    resultadoCk31.textContent = contador31;
+
+    const resultadoCk32 = document.getElementById("ck32");
+    resultadoCk32.textContent = contador32;
+
+    const resultadoCk33 = document.getElementById("ck33");
+    resultadoCk33.textContent = contador33;
+
+    const resultadoCk34 = document.getElementById("ck34");
+    resultadoCk34.textContent = contador34;
+    
+    const resultadoCk35 = document.getElementById("ck35");
+    resultadoCk35.textContent = contador35;
+
+    const resultadoCk36 = document.getElementById("ck36");
+    resultadoCk36.textContent = contador36;
+
+    const resultadoCk37 = document.getElementById("ck37");
+    resultadoCk37.textContent = contador37;
 </script>
 </script>
 </html>

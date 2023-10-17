@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html28">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,5 +80,20 @@ function check(index) {
         document.getElementById("kong").style.display = "none";
     }
 }
+
+
+
+
+// Inicializa o contador28 se ele não existir no localStorage
+if (!localStorage.getItem("contador28")) {
+        localStorage.setItem("contador28", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html28 = document.getElementById("html28");
+        html28.addEventListener('click', function() {
+            let contador28 = parseInt(localStorage.getItem("contador28"));
+            contador28 += 1;
+            localStorage.setItem("contador28", contador28.toString());
+            });
 </script>
 </html>

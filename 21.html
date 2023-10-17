@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html21">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,5 +39,20 @@
         document.getElementById("boo1").src = caminhoNovaImagem;
         document.getElementById("btcontinue3").style.display = "block";
     }
+
+
+
+
+    // Inicializa o contador21 se ele não existir no localStorage
+    if (!localStorage.getItem("contador21")) {
+        localStorage.setItem("contador21", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html21 = document.getElementById("html21");
+        html21.addEventListener('click', function() {
+            let contador21 = parseInt(localStorage.getItem("contador21"));
+            contador21 += 1;
+            localStorage.setItem("contador21", contador21.toString());
+            });
 </script>
 </html>

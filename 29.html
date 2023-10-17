@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html29">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,5 +95,17 @@
                 botao.style.display = 'none';
             }
         }
+
+        // Inicializa o contador29 se ele não existir no localStorage
+    if (!localStorage.getItem("contador29")) {
+        localStorage.setItem("contador29", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html29 = document.getElementById("html29");
+        html29.addEventListener('click', function() {
+            let contador29 = parseInt(localStorage.getItem("contador29"));
+            contador29 += 1;
+            localStorage.setItem("contador29", contador29.toString());
+            });
     </script>    
 </html>

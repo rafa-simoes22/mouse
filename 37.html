@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html37">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -162,5 +162,20 @@
             checkAnswer(inputId.charAt(0)); // Check the answer after pasting
             checkAllAnswers(); // Check if all answers are correct
         }
+
+
+
+
+        // Inicializa o contador37 se ele não existir no localStorage
+    if (!localStorage.getItem("contador37")) {
+        localStorage.setItem("contador37", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html37 = document.getElementById("html37");
+        html37.addEventListener('click', function() {
+            let contador37 = parseInt(localStorage.getItem("contador37"));
+            contador37 += 1;
+            localStorage.setItem("contador37", contador37.toString());
+            });
 </script>
 </html>

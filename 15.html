@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" id="html15">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Mousercise</title>
@@ -58,4 +58,17 @@
         </div>
     </div>
 </body>
+<script>
+    // Inicializa o contador15 se ele não existir no localStorage
+    if (!localStorage.getItem("contador15")) {
+        localStorage.setItem("contador15", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html15 = document.getElementById("html15");
+        html15.addEventListener('click', function() {
+            let contador15 = parseInt(localStorage.getItem("contador15"));
+            contador15 += 1;
+            localStorage.setItem("contador15", contador15.toString());
+            });
+</script>
 </html>

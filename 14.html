@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html14">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,4 +50,17 @@
         <picture><img id="zelda" src="/imagens/zelda64.gif" alt=""></picture>
     </div>
 </body>
+<script>
+    // Inicializa o contador14 se ele não existir no localStorage
+    if (!localStorage.getItem("contador14")) {
+        localStorage.setItem("contador14", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html14 = document.getElementById("html14");
+        html14.addEventListener('click', function() {
+            let contador14 = parseInt(localStorage.getItem("contador14"));
+            contador14 += 1;
+            localStorage.setItem("contador14", contador14.toString());
+            });
+</script>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html36">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,6 +52,21 @@
             alert("Preencha o nome e sobrenome antes de prosseguir.");
         }
     }
+
+
+
+
+    // Inicializa o contador36 se ele não existir no localStorage
+    if (!localStorage.getItem("contador36")) {
+        localStorage.setItem("contador36", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html36 = document.getElementById("html36");
+        html36.addEventListener('click', function() {
+            let contador36 = parseInt(localStorage.getItem("contador36"));
+            contador36 += 1;
+            localStorage.setItem("contador36", contador36.toString());
+            });
 </script>
 </html>
 

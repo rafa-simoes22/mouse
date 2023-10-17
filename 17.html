@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html17">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,4 +52,17 @@
         </tbody>
     </table>
 </body>
+<script>
+    // Inicializa o contador17 se ele não existir no localStorage
+    if (!localStorage.getItem("contador17")) {
+        localStorage.setItem("contador17", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html17 = document.getElementById("html17");
+        html17.addEventListener('click', function() {
+            let contador17 = parseInt(localStorage.getItem("contador17"));
+            contador17 += 1;
+            localStorage.setItem("contador17", contador17.toString());
+            });
+</script>
 </html>

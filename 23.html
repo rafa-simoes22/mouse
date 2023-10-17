@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html23">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +21,18 @@
         <picture><img src="./imagens/partidaKongMario.gif"></picture>
         <p>Clique <a href="#" onclick="location = '24.html'">aqui</a> para continuar para a próxima página.</p>
     </div>
-
 </body>
+<script>
+    // Inicializa o contador23 se ele não existir no localStorage
+    if (!localStorage.getItem("contador23")) {
+        localStorage.setItem("contador23", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const html23 = document.getElementById("html23");
+        html23.addEventListener('click', function() {
+            let contador23 = parseInt(localStorage.getItem("contador23"));
+            contador23 += 1;
+            localStorage.setItem("contador23", contador23.toString());
+            });
+</script>
 </html>

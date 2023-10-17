@@ -95,17 +95,6 @@
     <button id="resetButton">Voltar ao Inicio</button>
 </body>
 <script>
-    // Recupera o valor do contador do localStorage
-    const contador = localStorage.getItem("contador");
-    const contador2 = localStorage.getItem("contador2");
-
-    // Exibe o número de cliques realizados na célula com id "ck1"
-    const resultadoCk1 = document.getElementById("ck1");
-    resultadoCk1.textContent = contador;
-    const resultadoCk2 = document.getElementById("ck2");
-    resultadoCk2.textContent = contador2;
-
-
     const resetButton = document.getElementById("resetButton");
         resetButton.addEventListener('click', function() {
             // Limpar o localStorage
@@ -118,6 +107,49 @@
                 cell.textContent = "0";
             });
         });
+    
+    // Recupera o valor do contador do localStorage
+    const contador = localStorage.getItem("contador");
+    const contador2 = localStorage.getItem("contador2");
+    const contador3 = localStorage.getItem("contador3");
+    const contador4 = localStorage.getItem("contador4");
+    const contador5 = localStorage.getItem("contador5");
+    const contador6 = localStorage.getItem("contador6");
+    const contador7 = localStorage.getItem("contador7");
+    const contador8 = localStorage.getItem("contador8");
+    const contador9 = localStorage.getItem("contador9");
+    const contador10 = localStorage.getItem("contador10");
+
+    // Exibe o número de cliques realizados na célula com id "ck1"
+    const resultadoCk1 = document.getElementById("ck1");
+    resultadoCk1.textContent = contador;
+
+    const resultadoCk2 = document.getElementById("ck2");
+    resultadoCk2.textContent = contador2;
+
+    const resultadoCk3 = document.getElementById("ck3");
+    resultadoCk3.textContent = contador3;
+
+    const resultadoCk4 = document.getElementById("ck4");
+    resultadoCk4.textContent = contador4;
+    
+    const resultadoCk5 = document.getElementById("ck5");
+    resultadoCk5.textContent = contador5;
+
+    const resultadoCk6 = document.getElementById("ck6");
+    resultadoCk6.textContent = contador6;
+
+    const resultadoCk7 = document.getElementById("ck7");
+    resultadoCk7.textContent = contador7;
+
+    const resultadoCk8 = document.getElementById("ck8");
+    resultadoCk8.textContent = contador8;
+
+    const resultadoCk9 = document.getElementById("ck9");
+    resultadoCk9.textContent = contador9;
+
+    const resultadoCk10 = document.getElementById("ck10");
+    resultadoCk10.textContent = contador10;
 </script>
 </script>
 </html>

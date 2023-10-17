@@ -33,64 +33,91 @@
             <tr>
                 <td>1</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck1"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck2"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck3"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>4</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck4"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck5"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>6</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck6"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>7</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck7"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>8</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck8"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>9</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck9"></td>
                 <td></td>
             </tr>
             <tr>
                 <td>10</td>
                 <td>1</td>
-                <td></td>
+                <td id="ck10"></td>
                 <td></td>
             </tr>
         </tbody>
     </table>
+    <button id="resetButton">Voltar ao Inicio</button>
 </body>
+<script>
+    // Recupera o valor do contador do localStorage
+    const contador = localStorage.getItem("contador");
+    const contador2 = localStorage.getItem("contador2");
+
+    // Exibe o número de cliques realizados na célula com id "ck1"
+    const resultadoCk1 = document.getElementById("ck1");
+    resultadoCk1.textContent = contador;
+    const resultadoCk2 = document.getElementById("ck2");
+    resultadoCk2.textContent = contador2;
+
+
+    const resetButton = document.getElementById("resetButton");
+        resetButton.addEventListener('click', function() {
+            // Limpar o localStorage
+            localStorage.clear();
+            // Redirecionar para a página start.html
+            window.location.href = 'index.html';
+            // Limpar os dados da tabela definindo o conteúdo de cada célula como "0"
+            const cells = document.querySelectorAll("td");
+            cells.forEach(function(cell) {
+                cell.textContent = "0";
+            });
+        });
+</script>
+</script>
 </html>

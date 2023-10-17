@@ -26,14 +26,14 @@
         left: 20%;
     }
 </style>
-<body>
+<body id="body1">
     <div class="titulo">
         <h1>Mousercise</h1>
     </div>
     <div>
         <p>Clique no número 1 abaixo.</p>
         <div>
-            <span id="um" onclick="location = '2.html'">1</span>
+            <span id="um" onclick="location = '39.html'">1</span>
         </div>
         <div class="cont">
             <p>O Nintendo Entertainment System (NES), é o console responsável por inaugurar a era dos jogos de 8 bits. Lançado em 1983 no Japão e em 1985 nos Estados Unidos, o NES revolucionou a indústria de videogames e desempenhou um papel fundamental na popularização dos jogos eletrônicos.</p>
@@ -43,4 +43,18 @@
         </div>
     </div>
 </body>
+<script>
+    // Inicializa o contador se ele não existir no localStorage
+    if (!localStorage.getItem("contador")) {
+        localStorage.setItem("contador", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body1 = document.getElementById("body1");
+        body1.addEventListener('click', function() {
+            let contador = parseInt(localStorage.getItem("contador"));
+            contador += 1;
+            localStorage.setItem("contador", contador.toString());
+            });
+</script>
+</script>
 </html>
